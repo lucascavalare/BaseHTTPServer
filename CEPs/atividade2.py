@@ -64,7 +64,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         
      # tratamento de uma requisição POST   
      def do_POST(self):
-            self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
+         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
             
 # Criação do Servidor
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
