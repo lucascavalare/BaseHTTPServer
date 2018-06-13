@@ -70,4 +70,4 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
 
 # Run forever
-httpserver.server_forever()
+httpserver.serve_forever()
