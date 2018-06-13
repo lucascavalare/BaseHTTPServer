@@ -2,10 +2,10 @@
 import BaseHTTPServer, json
 '''
 Servidor Web
--- estende BaseHTTPRequestHandler
--- trata apenas requisições feitas através do método GET
--- trata parâmetros passados na URL
--- retorna um texto sJSON gerado com base nos parâmetros
+-estende BaseHTTPRequestHandler
+-trata apenas requisições feitas através do método GET
+-trata parâmetros passados na URL
+-retorna um texto sJSON gerado com base nos parâmetros
 '''
 import queryparser
 '''
