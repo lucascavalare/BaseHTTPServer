@@ -1,11 +1,11 @@
-# -*- coding cp1252 -*-
+# -*- coding: cp1252 -*-
 import BaseHTTPServer, json
 '''
-    Servidor Web
-        -- estende BaseHTTPRequestHandler
-        -- trata apenas requisições feitas através do método GET
-        -- trata parâmetros passados na URL
-        -- retorna um texto sJSON gerado com base nos parâmetros
+Servidor Web
+-- estende BaseHTTPRequestHandler
+-- trata apenas requisições feitas através do método GET
+-- trata parâmetros passados na URL
+-- retorna um texto sJSON gerado com base nos parâmetros
 '''
 import queryparser
 '''
