@@ -44,3 +44,30 @@ def criaMapa(uf):
     faz a consulta ao CEP passado como parâmetro e
     escreve na saída padrão os dados encontrados.
 '''
+def consulta(cep):
+    global mapa
+    if cep in mapa.keys():
+        dados = mapa[cep]
+        print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+    else:
+        print 'CEP', cep, 'NOT FOUND'
+
+class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
+    
+    # tratamento de uma requisição GET
+    def do_GET(self):
+        print self.path
+        self.send_response(200)
+        self.send_header("Content-type","text/json")
+        self.end_headers()
+        self.wfile.write(resposta(self.path))
+        
+     # tratamento de uma requisição POST   
+     def do_POST(self):
+            self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
+            
+# Criação do Servidor
+httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
+
+# Run forever
+httpserver.server_forever()
