@@ -43,7 +43,7 @@ for file in os.listdir('.'):
         #print file
     	with open(file) as json_data:
 		mapa = json.load(json_data)
-    	return mapa
+    		return mapa
 print 'mapa criado tamanho:',len(mapa)
 
 '''
