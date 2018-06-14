@@ -73,8 +73,8 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
 
             # 'escreve' o conteudo da resposta
             self.wfile.write(htmlpage)
-        else:
-            self.send_error(404, notfound)
+        #else:
+            #self.send_error(404)
 
 '''
     Cria o servidor web, usando a classe definida acima,
