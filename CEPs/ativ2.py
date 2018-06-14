@@ -72,11 +72,11 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
 
             # 'escreve' o conteudo da resposta
-            self.wfile.write(htmlpage)
+            self.wfile.write(consulta)
+	    #return
+        else:
+            self.send_error(404)
 	    return
-        #else:
-            #self.send_error(404)
-
 '''
     Cria o servidor web, usando a classe definida acima,
     atendendo as requisições na porta 8080
