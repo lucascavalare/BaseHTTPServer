@@ -61,7 +61,7 @@ def consulta(cep):
 '''	
 class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/":
+        if self.path == ".":
             # inicia o envio da resposta c/ código de retorno 200 (OK)
             self.send_response(200)
             
