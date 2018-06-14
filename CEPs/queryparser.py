@@ -19,12 +19,12 @@ def parse(url):
                 nome += ch
         elif st == 1:
             if(ch == '='):
-                st = 2
-            else:
                 res[str(nome)] = str(valor)
                 nome = ''
                 valor = ''
-                #nome += ch
+                st = 2
+            else:                
+                nome += ch
                 return res
                 
 '''        elif st == 2:
