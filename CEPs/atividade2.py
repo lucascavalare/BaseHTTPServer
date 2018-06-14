@@ -11,11 +11,13 @@ import queryparser
 '''
     retorna um texto JSON usando os parâmetros passados em path
 '''
-def resposta(path):
-    # os pares (parametro, valor) são colocados no dicionário dict
-    params = queryparser.parse(path)
-    return json.dumps(params)
-notfound = "GET: resource not found"
+#def resposta(path):
+#    # os pares (parametro, valor) são colocados no dicionário dict
+#    params = queryparser.parse(path)
+#    return json.dumps(params)
+#notfound = "GET: resource not found"
+
+
 '''
     Lê um arquivo de CEPs no formato JSON e
     retorna um mapa que associa cada CEP aos
