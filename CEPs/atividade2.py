@@ -16,8 +16,16 @@ def resposta(path):
     params = queryparser.parse(path)
     return json.dumps(params)
 notfound = "GET: resource not found"
-
-
+'''
+monta uma sequencia de linhas com os parâmetros passados na url
+como parte de um texto HTML
+'''
+def getParms(path):
+    parms = queryparser.parse(path)
+    res = '<h3> Parâmetros:</h3>\n'
+    for k in parms.keys():
+        res += '<p>'+k+'="'+parms[k]+'"\n'
+    return res
 '''
     Lê um arquivo de CEPs no formato JSON e
     retorna um mapa que associa cada CEP aos
