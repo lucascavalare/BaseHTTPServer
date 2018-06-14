@@ -23,8 +23,8 @@ def parse(url):
             else:         
                 nome += ch
        elif st == 2:
-            st = 3
-            if ch != '&':
+           st = 3
+               if ch != '&':
                 valor += ch
             else:
                 res[str(nome)] = str(valor)
