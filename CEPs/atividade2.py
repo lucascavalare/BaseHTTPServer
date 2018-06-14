@@ -41,9 +41,9 @@ print 'inicio'
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
         #print file
-    with open(file) as json_data:
-	    mapa = json.load(json_data)
-        return mapa
+    	with open(file) as json_data:
+	mapa = json.load(json_data)
+    	return mapa
 print 'mapa criado tamanho:',len(mapa)
 
 '''
