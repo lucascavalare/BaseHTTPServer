@@ -11,11 +11,11 @@ Servidor Web
 '''
     retorna um texto JSON usando os parâmetros passados em path
 '''
-def resposta(path):
+#def resposta(path):
 #    # os pares (parametro, valor) são colocados no dicionário dict
-    params = queryparser.parse(path)
-    return json.dumps(params)
-notfound = "GET: resource not found"
+#    params = queryparser.parse(path)
+#    return json.dumps(params)
+#notfound = "GET: resource not found"
 '''
 monta uma sequencia de linhas com os parâmetros passados na url
 como parte de um texto HTML
