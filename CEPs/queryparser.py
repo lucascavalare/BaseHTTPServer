@@ -39,7 +39,8 @@ def parse(url):
                     st = 0
             else:
                 valor += ch
-'''    return res
+'''    
+        return res
                 
     
 
