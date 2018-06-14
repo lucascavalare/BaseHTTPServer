@@ -73,6 +73,7 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
 
             # 'escreve' o conteudo da resposta
             self.wfile.write(htmlpage)
+	    return
         #else:
             #self.send_error(404)
 
