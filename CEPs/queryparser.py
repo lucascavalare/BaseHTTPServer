@@ -6,8 +6,8 @@ import urlparse
 
 def parse(url):
     query = urlparse.urlparse(url)[4]
-    print query
-'''    res = {}
+    #print query
+    res = {}
     st = 0
     nome = ''
     valor = ''
@@ -39,8 +39,7 @@ def parse(url):
                     st = 0
             else:
                 valor += ch
-
-'''       
+      
                 
     
 
