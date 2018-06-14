@@ -15,6 +15,7 @@ def parse(url):
     for ch in query:
         if st == 0:
             if(ch != '/')and(ch != '?')and(ch !='&'):
+                res[str(nome)] = str(valor)
                 st = 1
                 nome += ch
         elif st == 1:
@@ -22,6 +23,7 @@ def parse(url):
                 st = 2
             else:
                 nome += ch
+                
 '''        elif st == 2:
             st = 3
             if ch != '&':
