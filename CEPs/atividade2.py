@@ -1,5 +1,5 @@
 # -*- coding: cp1252 -*-
-import BaseHTTPServer, json
+import BaseHTTPServer, json, os
 '''
 Servidor Web
 -estende BaseHTTPRequestHandler
