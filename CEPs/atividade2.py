@@ -37,10 +37,11 @@ def criaMapa(uf):
     #    cep = elemento['CEP']
     #    mapa[cep] = elemento
     #return mapa
-    print 'inicio'
-    for file in os.listdir('.'):
-        if fnmatch.fnmatch(file, '*.json'):
-            print file
+print 'inicio'
+for file in os.listdir('.'):
+    if fnmatch.fnmatch(file, '*.json'):
+        print file
+    
 
 '''
     faz a consulta ao CEP passado como parâmetro e
