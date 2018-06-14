@@ -48,6 +48,7 @@ def criaMapa(uf):
 '''
 def consulta(cep):
     global mapa
+    global resposta
     if cep in mapa.keys():
         dados = mapa[cep]
         print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
