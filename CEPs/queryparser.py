@@ -21,13 +21,8 @@ def parse(url):
             if(ch == '='):
                 st = 2
             else:         
-                res[str(nome)] = str(valor)
-                nome = 'res'
-                valor = 'res'
-                #nome += ch
-                return res
-                
-'''        elif st == 2:
+                nome += ch
+       elif st == 2:
             st = 3
             if ch != '&':
                 valor += ch
@@ -44,7 +39,7 @@ def parse(url):
                     st = 0
             else:
                 valor += ch
-'''    
+
         
                 
     
