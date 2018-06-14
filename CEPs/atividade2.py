@@ -7,25 +7,25 @@ Servidor Web
 -trata parâmetros passados na URL
 -retorna um texto sJSON gerado com base nos parâmetros
 '''
-#import queryparser
+import queryparser
 '''
     retorna um texto JSON usando os parâmetros passados em path
 '''
-#def resposta(path):
-#    # os pares (parametro, valor) são colocados no dicionário dict
-#    params = queryparser.parse(path)
-#    return json.dumps(params)
-#notfound = "GET: resource not found"
+def resposta(path):
+    # os pares (parametro, valor) são colocados no dicionário dict
+    params = queryparser.parse(path)
+    return json.dumps(params)
+notfound = "GET: resource not found"
 '''
 monta uma sequencia de linhas com os parâmetros passados na url
 como parte de um texto HTML
 '''
-#def getParms(path):
-#    parms = queryparser.parse(path)
-#    res = '<h3> Parâmetros:</h3>\n'
-#    for k in parms.keys():
-#        res += '<p>'+k+'="'+parms[k]+'"\n'
-#    return res
+def getParms(path):
+    parms = queryparser.parse(path)
+    res = '<h3> Parâmetros:</h3>\n'
+    for k in parms.keys():
+        res += '<p>'+k+'="'+parms[k]+'"\n'
+    return res
 '''
     Lê um arquivo de CEPs no formato JSON e
     retorna um mapa que associa cada CEP aos
@@ -77,8 +77,8 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type","text/json")
         self.end_headers()
-        #self.wfile.write(resposta(self.path))
-        self.wfile.write(consulta(self.path))
+        self.wfile.write(resposta(self.path))
+        
 	
      # tratamento de uma requisição POST   
     def do_POST(self):
