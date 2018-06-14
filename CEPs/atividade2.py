@@ -11,11 +11,11 @@ import queryparser
 '''
     retorna um texto JSON usando os parâmetros passados em path
 '''
-#def resposta(path):
+def resposta(path):
 #    # os pares (parametro, valor) são colocados no dicionário dict
-#    params = queryparser.parse(path)
-#    return json.dumps(params)
-#notfound = "GET: resource not found"
+    params = queryparser.parse(path)
+    return json.dumps(params)
+notfound = "GET: resource not found"
 
 
 '''
@@ -48,7 +48,6 @@ def criaMapa(uf):
 '''
 def consulta(cep):
     global mapa
-    global resposta
     if cep in mapa.keys():
         dados = mapa[cep]
         print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
