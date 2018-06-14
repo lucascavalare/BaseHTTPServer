@@ -40,11 +40,14 @@ def criaMapa(uf):
 print 'inicio'
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
-        #print file
-    	with open(file) as json_data:
-		mapa = json.load(json_data)
+        f = open(file)
+	txt = f.read()
+	lista = json.loads(txt)
+	#print file
+    	#with open(file) as json_data:
+	#	mapa = json.load(json_data)
     		#return mapa
-print 'mapa criado tamanho:',len(mapa)
+print 'mapa criado tamanho:',len(lista)
 
 '''
     faz a consulta ao CEP passado como parâmetro e
