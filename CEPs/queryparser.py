@@ -22,8 +22,8 @@ def parse(url):
                 st = 2
             else:         
                 res[str(nome)] = str(valor)
-                nome = ''
-                valor = ''
+                nome = 'res'
+                valor = 'res'
                 #nome += ch
                 return res
                 
