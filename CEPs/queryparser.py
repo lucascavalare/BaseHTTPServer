@@ -42,7 +42,7 @@ def parse(url):
             else:
                 valor += ch
 '''    
-    return res
+return res
                 
     
 
