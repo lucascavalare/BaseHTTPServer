@@ -47,7 +47,7 @@ for file in os.listdir('.'):
     	#with open(file) as json_data:
 	#	mapa = json.load(json_data)
     		#return mapa
-print 'mapa criado tamanho:',len(txt)
+print 'mapa criado tamanho:',txt
 
 '''
     faz a consulta ao CEP passado como parâmetro e
