@@ -77,8 +77,9 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type","text/json")
         self.end_headers()
-        self.wfile.write(resposta(self.path))
-        
+        #self.wfile.write(resposta(self.path))
+        self.wfile.write(consulta(self.path))
+	
      # tratamento de uma requisição POST   
     def do_POST(self):
         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
