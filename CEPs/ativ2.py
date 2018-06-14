@@ -52,7 +52,7 @@ def consulta(cep):
         dados = mapa[cep]
         print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
     else: 
-        print 'CEP', cep, 'Not Found'
+        print 'CEP', cep, 'nao encontrado'
 
 '''
     classe que estende BaseHHTPRequestHandler:
