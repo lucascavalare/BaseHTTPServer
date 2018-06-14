@@ -23,6 +23,7 @@ def parse(url):
                 st = 2
             else:
                 nome += ch
+                return res
                 
 '''        elif st == 2:
             st = 3
@@ -42,7 +43,7 @@ def parse(url):
             else:
                 valor += ch
 '''    
-        return res
+        
                 
     
 
