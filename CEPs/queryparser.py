@@ -11,20 +11,20 @@ def parse(url):
     st = 0
     nome = ''
     valor = ''
-    query += '&'
+    query += '?'
     for ch in query:
         if st == 0:
-            if(ch != '/')and(ch != '?')and(ch !='&'):
+            if(ch != '/')and(ch != '?'):
                 st = 1
                 nome += ch
         elif st == 1:
             if(ch == '='):
+                st = 2
+            else:         
                 res[str(nome)] = str(valor)
                 nome = ''
                 valor = ''
-                st = 2
-            else:                
-                nome += ch
+                #nome += ch
                 return res
                 
 '''        elif st == 2:
