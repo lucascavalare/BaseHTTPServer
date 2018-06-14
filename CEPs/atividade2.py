@@ -26,11 +26,11 @@ notfound = "GET: resource not found"
 '''
 def criaMapa(uf):
     # 'abre' o arquivo para leitura
-    f = open('ceps_' + uf + '.json', 'r')
+    #f = open('ceps_' + uf + '.json', 'r')
     # efetua a leitura do arquivo(dados lidos armazenados em txt)
-    txt = f.read()
+    #txt = f.read()
     # parsing do JSON (resultado em lista)
-    lista = json.loads(txt)
+    #lista = json.loads(txt)
     # criação do mapa
     mapa = {}
     #for elemento in lista:
@@ -42,7 +42,7 @@ for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
         #print file
     	with open(file) as json_data:
-		mapa = json.loads(json_data)
+		mapa = json.load(json_data)
     		#return mapa
 print 'mapa criado tamanho:',len(mapa)
 
