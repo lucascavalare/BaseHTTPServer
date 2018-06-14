@@ -24,7 +24,7 @@ def parse(url):
                 nome += ch
         elif st == 2:
             st = 3
-               if ch != '&':
+            if ch != '&':
                 valor += ch
             else:
                 res[str(nome)] = str(valor)
