@@ -45,7 +45,7 @@ def criaMapa(uf):
 '''
     faz a consulta ao CEP passado como parâmetro e
     escreve na saída padrão os dados encontrados.
-'''
+
 def consulta(cep):
     global mapa
     if cep in mapa.keys():
@@ -73,3 +73,4 @@ httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
 
 # Run forever
 httpserver.serve_forever()
+'''
