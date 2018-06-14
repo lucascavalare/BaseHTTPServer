@@ -22,21 +22,25 @@ import os
 def criaMapa(uf):
 
    # 'abre' o arquivo para leitura
-   f = open('ceps_' + uf + '.json', 'r')
+   #f = open('ceps_' + uf + '.json', 'r')
 
    # efetua a leitura do arquivo (dados lidos armazenados em txt)
-   txt = f.read()
+   #txt = f.read()
 
    # parsing do JSON (resultado em lista)
-   lista = json.loads(txt)
+   #lista = json.loads(txt)
 
    # criação do mapa
-   mapa = {}
-   for elemento in lista:
-       cep = elemento['CEP']
-       mapa[cep] = elemento
-   return mapa
-
+   #mapa = {}
+   #for elemento in lista:
+   #    cep = elemento['CEP']
+   #    mapa[cep] = elemento
+   #return mapa
+   for file in os.listdir('.'):
+       if fnmatch.fnmatch(file, '*.json'):
+           f = open(file)
+	   txt = f.read()
+	   lista = json.loads(txt)
 
 '''
    Faz a consulta ao CEP passado como parâmetro e
@@ -50,12 +54,38 @@ def consulta(cep):
     else: 
         print 'CEP', cep, 'Not Found'
 
-#print 'inicio'
-#for file in os.listdir('.'):
-#    if fnmatch.fnmatch(file, '*.json'):
-#        #print file
-#        with open(file) as json_data:
-#	    mapa = json.load(json_data)
-#print 'mapa criado tamanho:',len(mapa)
+'''
+    classe que estende BaseHHTPRequestHandler:
+    -- redefine o método do_Get() para que faça o tratamento desejado
+    -- os demais métodos da biblioteca são mantidos 'as is'.
+'''	
+class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == "/":
+            # inicia o envio da resposta c/ código de retorno 200 (OK)
+            self.send_response(200)
+            
+            # define o cabeçalho da resposta (neste caso 'avisa' que o conteúdo será html)
+            self.send_header("Content-type","text/html")
+
+            # 'fecha' o cabeçalho
+            self.end_headers()
+
+            # 'escreve' o conteudo da resposta
+            self.wfile.write(htmlpage)
+        else:
+            self.send_error(404, notfound)
+
+'''
+    Cria o servidor web, usando a classe definida acima,
+    atendendo as requisições na porta 8080
+'''
+httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo1)
+
+'''
+    Ativa o serviço, 'ad infinitum' 
+'''
+httpserver.serve_forever()
+
 
 
