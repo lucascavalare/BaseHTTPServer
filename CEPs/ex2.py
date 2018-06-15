@@ -26,6 +26,7 @@ def criaMapa(lista):
     #        lista = json.loads(txt)
             #print l
         # criação do mapa
+            global mapa
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
