@@ -33,8 +33,7 @@ for file in os.listdir('.'):
                 myJson = org.json.JSONObject(values)
                 
                 say("The CEP is " + myJson.get("CEP"))
-                
-             '''   
+'''   
                 print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             else:
                 print 'CEP', cep, 'nao encontrado'
