@@ -23,7 +23,7 @@ for file in os.listdir('.'):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 #python 3: a sintaxe do print é diferente
-                print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+                print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             else:
                 print 'CEP', cep, 'nao encontrado'
 '''        
