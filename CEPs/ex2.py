@@ -34,7 +34,7 @@ for file in os.listdir('.'):
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             #else:
                 #print 'CEP', cep, 'nao encontrado'
-
+'''
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -50,6 +50,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
 
+'''
 
 # criação do servidor            
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
