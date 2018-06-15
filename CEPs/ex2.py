@@ -15,8 +15,8 @@ for file in os.listdir('.'):
         f = open(file)
         txt = f.read()
         lista = json.loads(txt)
-        #print lista
-        return lista
+        print lista[CEP]
+        #return lista
         
 def criaMapa(lista):
     #for file in os.listdir('.'):
