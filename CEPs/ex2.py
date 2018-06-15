@@ -27,8 +27,8 @@ for file in os.listdir('.'):
                 dados = mapa[cep]
                 jsonData = json.dumps(dados, indent=8)
                 if '49037563' in jsonData:
-                    dados[cep] = jsonData
-                #print(jsonData)
+                    #dados[cep] = jsonData
+                    print(jsonData)
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
