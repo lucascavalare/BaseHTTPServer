@@ -19,8 +19,13 @@ for file in os.listdir('.'):
         for elemento in lista:
             cep = elemento['CEP']
             mapa[cep] = elemento
-        print mapa
-        #return lista
+        #print mapa
+            if cep in mapa.keys():
+                dados = mapa[cep]
+                #python 3: a sintaxe do print é diferente
+                print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+            else:
+                print 'CEP', cep, 'nao encontrado'
 '''        
 def criaMapa(lista):
     #for file in os.listdir('.'):
