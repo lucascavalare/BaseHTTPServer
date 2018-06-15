@@ -26,15 +26,15 @@ for file in os.listdir('.'):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 jsonData = json.dumps(dados, indent=8)
-                #if '49037563' in jsonData:
+                if '49037563' in jsonData:
                     #dados[cep] = jsonData
-                #    print(jsonData)
+                    print(jsonData)
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             #else:
                 #print 'CEP', cep, 'nao encontrado'
-
+'''
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -51,7 +51,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
 # criação do servidor            
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
-
+'''
 # rodar até ...
 httpserver.serve_forever()
 '''
