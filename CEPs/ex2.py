@@ -46,7 +46,7 @@ print 'inicio'
 #mapa = lista
 #print 'mapa criado tamanho:',len(mapa)
 
-consulta ('77001004')
+consulta('77001004')
 consulta('69301011')
 consulta('69301015')
 consulta('69301020')
