@@ -21,7 +21,7 @@ for file in os.listdir('.'):
             mapa[cep] = elemento
         print mapa
         #return lista
-        
+'''        
 def criaMapa(lista):
     #for file in os.listdir('.'):
     #    if fnmatch.fnmatch(file, '*.json'):
@@ -49,6 +49,7 @@ def consulta(cep):
 print 'inicio'
 #mapa = criaMapa('RR')
 print 'mapa criado tamanho:',len(mapa)
+'''
 '''
 consulta('77001004')
 consulta('69301011')
