@@ -15,6 +15,7 @@ for file in os.listdir('.'):
         f = open(file)
         txt = f.read()
         lista = json.loads(txt)
+        mapa = {}
         for elemento in lista:
             cep = elemento['CEP']
             mapa[cep] = elemento
