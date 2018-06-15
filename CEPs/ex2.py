@@ -30,7 +30,7 @@ def criaMapa(uf):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            return mapa
+            print mapa
                 
 def consulta(cep):
     #print mapa.keys()
