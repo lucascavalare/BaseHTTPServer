@@ -9,7 +9,7 @@ import json, os, fnmatch
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
-'''
+
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
         f = open(file)
@@ -17,13 +17,13 @@ for file in os.listdir('.'):
         lista = json.loads(txt)
         #print lista
         #return lista
-'''        
-def criaMapa(uf):
-    for file in os.listdir('.'):
-        if fnmatch.fnmatch(file, '*.json'):
-            f = open(file)
-            txt = f.read()
-            lista = json.loads(txt)
+        
+def criaMapa(lista):
+    #for file in os.listdir('.'):
+    #    if fnmatch.fnmatch(file, '*.json'):
+    #        f = open(file)
+    #        txt = f.read()
+    #        lista = json.loads(txt)
             #print l
         # criação do mapa
             mapa = {}
@@ -43,7 +43,7 @@ def consulta(cep):
         print 'CEP', cep, 'nao encontrado'
 
 print 'inicio'
-mapa = criaMapa('RR')
+#mapa = criaMapa('RR')
 print 'mapa criado tamanho:',len(mapa)
 '''
 consulta('77001004')
