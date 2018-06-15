@@ -15,8 +15,9 @@ import panda as pd
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
         f = open(file)
-        txt = f.read()
+        #txt = f.read()
         #lista = json.loads(txt)
+        data = f.read()
         lista = [json.loads(part)['data'] for part in data]
         for part in data:
             for record in part:
