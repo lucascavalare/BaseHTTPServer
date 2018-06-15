@@ -1,5 +1,6 @@
 # -*- coding: cp1252 -*-
 import json, os, fnmatch
+import panda as pd
 
 # -*- coding: cp1252 -*-
 '''
@@ -15,7 +16,13 @@ for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.json'):
         f = open(file)
         txt = f.read()
-        lista = json.loads(txt)
+        #lista = json.loads(txt)
+        lista = [json.loads(part)['data'] for part in data]
+        for part in data:
+            for record in part:
+                record['Tipo_Logradouro']['Complemento']['Estado']['Bairro']['Cidade']['Logradouro']['CEP']['Local'] = record['CEP']
+        data = [record['CEP'] for part in data for record in part]
+        data_frame = pd.DataFrame(data)
         
         mapa = {}
         for elemento in lista:
