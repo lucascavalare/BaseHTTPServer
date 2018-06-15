@@ -39,7 +39,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
     def do_GET(self):
-print self.path
+        print self.path
         self.send_response(200)
         self.send_header("Content-type","text/json")
         self.end_headers()
