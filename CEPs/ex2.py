@@ -17,8 +17,8 @@ for file in os.listdir('.'):
         f = open(file)
         #txt = f.read()
         #lista = json.loads(txt)
+        data = []
         data = f.read()
-        lista = data
         lista = [json.loads(part)['data'] for part in data]
         for part in data:
             for record in part:
