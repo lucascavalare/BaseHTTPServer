@@ -43,7 +43,7 @@ def consulta(cep):
         print 'CEP', cep, 'nao encontrado'
 
 print 'inicio'
-mapa = criaMapa('uf')
+mapa = criaMapa('RR')
 print 'mapa criado tamanho:',len(mapa)
 '''
 consulta('77001004')
