@@ -25,9 +25,9 @@ for file in os.listdir('.'):
                 #python 3: a sintaxe do print é diferente
                 values = {
                 "CEP":"cep",
-                "Estado":"dados['Estado']
-                "Cidade":"dados['Cidade']
-                "Bairro":"dados['Bairro']
+                "Estado":"Estado",
+                "Cidade":"Cidade",
+                "Bairro":"Bairro"
                 }
                 
                 myJson = org.json.JSONObject(values)
