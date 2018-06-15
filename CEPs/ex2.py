@@ -52,3 +52,4 @@ consulta('69301015')
 consulta('69301020')
 consulta('69301030')
 consulta('13085185')   # CEP não presente nessa UF
+'''
