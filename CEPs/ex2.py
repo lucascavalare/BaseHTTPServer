@@ -25,8 +25,8 @@ for file in os.listdir('.'):
                 #python 3: a sintaxe do print é diferente
                 values = {
                 "CEP":"cep",
-                "Estado":"dados['Estado'],
-                "Cidade":"dados['Cidade'],
+                "Estado":"dados['Estado']
+                "Cidade":"dados['Cidade']
                 "Bairro":"dados['Bairro']
                 }
                 
