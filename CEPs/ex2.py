@@ -25,15 +25,37 @@ for file in os.listdir('.'):
         #print mapa
             if cep in mapa.keys():
                 dados = mapa[cep]
-                jsonData = json.dumps(dados,indent=8)
+                jsonData = json.dumps(dados)
                 if '49037563' in jsonData:
-                    print(dados)
+                    print(dados,indent=8)
                 #print(jsonData)
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             #else:
                 #print 'CEP', cep, 'nao encontrado'
+
+class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
+
+    # tratamento de uma requisicao GET
+    def do_GET(self):
+        print self.path
+        self.send_response(200)
+        self.send_header("Content-type","text/json")
+        self.end_headers()
+        #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path)))
+        self.wfile.write(dados(self.path))
+
+    # tratamento de uma requisicao POST
+    def do_POST(self):
+        self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
+
+
+# criação do servidor            
+httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
+
+# rodar até ...
+httpserver.serve_forever()
 
 '''        
 def criaMapa(lista):
