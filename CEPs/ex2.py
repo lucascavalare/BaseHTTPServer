@@ -1,7 +1,6 @@
 # -*- coding: cp1252 -*-
 import json, os, fnmatch
-import org.json.JSONObject
-import org.json.JSONArray
+
 # -*- coding: cp1252 -*-
 '''
         Inf 515 - Exemplo
@@ -17,6 +16,7 @@ for file in os.listdir('.'):
         f = open(file)
         txt = f.read()
         lista = json.loads(txt)
+        
         mapa = {}
         for elemento in lista:
             cep = elemento['CEP']
@@ -24,22 +24,13 @@ for file in os.listdir('.'):
         #print mapa
             if cep in mapa.keys():
                 dados = mapa[cep]
+                jsonData = json.dumps(dados)
+                print(jsonData)
                 #python 3: a sintaxe do print é diferente
-                values = {
-                "CEP":"cep",
-                "Estado":"Estado",
-                "Cidade":"Cidade",
-                "Bairro":"Bairro"
-                }
-                
-                myJson = org.json.JSONObject(values)
-                
-                say("The CEP is " + myJson.get("CEP"))
-'''   
-                print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+                #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             else:
                 print 'CEP', cep, 'nao encontrado'
-'''
+
 '''        
 def criaMapa(lista):
     #for file in os.listdir('.'):
