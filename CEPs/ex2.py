@@ -1,6 +1,7 @@
 # -*- coding: cp1252 -*-
 import json, os, fnmatch
 import org.json.JSONObject
+import org.json.JSONArray
 # -*- coding: cp1252 -*-
 '''
         Inf 515 - Exemplo
