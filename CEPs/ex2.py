@@ -23,9 +23,22 @@ for file in os.listdir('.'):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 #python 3: a sintaxe do print é diferente
+                values = {
+                "CEP":"cep",
+                "Estado":"dados['Estado'],
+                "Cidade":"dados['Cidade'],
+                "Bairro":"dados['Bairro']
+                }
+                
+                myJson = org.json.JSONObject(values)
+                
+                say("The CEP is " + myJson.get("CEP"))
+                
+             '''   
                 print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
             else:
                 print 'CEP', cep, 'nao encontrado'
+'''
 '''        
 def criaMapa(lista):
     #for file in os.listdir('.'):
