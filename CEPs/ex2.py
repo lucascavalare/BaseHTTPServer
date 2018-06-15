@@ -14,7 +14,8 @@ for file in os.listdir('.'):
         f = open(file)
         txt = f.read()
         lista = json.loads(txt)
-        print lista
+        #print lista
+        
 def criaMapa(lista):
     #for file in os.listdir('.'):
    #     if fnmatch.fnmatch(file, '*.json'):
