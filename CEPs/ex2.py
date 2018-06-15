@@ -42,7 +42,7 @@ def consulta(cep):
     else:
         print 'CEP', cep, 'nao encontrado'
 
-print 'inicio'
+#print 'inicio'
 #mapa = lista
 #print 'mapa criado tamanho:',len(mapa)
 '''
