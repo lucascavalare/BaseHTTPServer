@@ -41,16 +41,7 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
             # inicia o envio da resposta c/ código de retorno 200 (OK)
             self.send_response(200)
             
-            # define o cabeçalho da resposta (neste caso 'avisa' que o conteúdo será html)
-            self.send_header("Content-type","text/html")
-
-            # 'fecha' o cabeçalho
-            self.end_headers()
-
-            # 'escreve' o conteudo da resposta
-            self.wfile.write(jsonData)
-        else:
-            self.send_error(404, notfound)
+           
 
 '''
     Cria o servidor web, usando a classe definida acima,
