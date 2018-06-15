@@ -27,7 +27,7 @@ for file in os.listdir('.'):
                 dados = mapa[cep]
                 jsonData = json.dumps(dados, indent=8)
                 if '49037563' in jsonData:
-                    print(dados)
+                    cep = jsonData[dados]
                 #print(jsonData)
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
@@ -44,7 +44,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header("Content-type","text/json")
         self.end_headers()
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path)))
-        self.wfile.write(dados(self.path))
+        self.wfile.write(cep(self.path))
 
     # tratamento de uma requisicao POST
     def do_POST(self):
