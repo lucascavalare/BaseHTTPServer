@@ -29,7 +29,7 @@ def consulta(cep):
     global mapa
     if cep in mapa.keys():
         dados = mapa[cep]          
-        print ('CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+        print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
     else:
         print 'CEP', cep, 'não encontrado'
 
