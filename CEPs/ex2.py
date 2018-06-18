@@ -23,12 +23,12 @@ def consulta(cep):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
 
-            #global mapa
+                global mapa
                 if cep in mapa.keys():
-                   dados = mapa[cep]
-                   print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+                    dados = mapa[cep]
+                    print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
                 else:
-                   print 'CEP', cep, 'não encontrado'
+                    print 'CEP', cep, 'não encontrado'
 
 consulta('69301011')
 
