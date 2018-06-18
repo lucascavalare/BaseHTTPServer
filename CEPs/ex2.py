@@ -35,15 +35,15 @@ def consulta(cep):
 
 print 'inicio'
 mapa = carrega('cep')
-print 'mapa criado:',len(mapa)
+print 'mapa criado:', mapa 
 
-consulta('69900001')
-consulta('69301000')
-consulta('69301011')
-consulta('69301015')
-consulta('69301020')
-consulta('69301030')
-consulta('13085185')
+#consulta('69900001')
+#consulta('69301000')
+#consulta('69301011')
+#consulta('69301015')
+#consulta('69301020')
+#consulta('69301030')
+#consulta('13085185')
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
