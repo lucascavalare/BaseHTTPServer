@@ -24,44 +24,15 @@ def carrega(cep):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             print(json.dumps(mapa, indent=8))
+                mapa = carrega('cep')
             #return mapa
+                if cep in mapa.keys():
+                    dados = mapa[cep]
+                return dados
  
-#def consulta(cep):
-#    #global mapa
-#    if cep in mapa.keys():
-#        dados = mapa[cep]          
-#        print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
-#    else:
-#        print 'CEP', cep, 'não encontrado'
 
-#print 'inicio'
-mapa = carrega('cep')
-#print 'mapa criado:',len(mapa) 
-
-#consulta('49000007')
-
-#consulta('69301000')
-#consulta('69301011')
-#consulta('69301015')
-#consulta('69301020')
-#consulta('69301030')
-#consulta('13085185')
-
-                    #jsonData = json.dumps(dados, indent=8)
-                    #if '49500244' in jsonData:
-                    #    print "CEP:", jsonData
-                    #    return
-                        #return [jsonData]
                     
-                    
-#print "CEP:",jsonData
-       
-                #python 3: a sintaxe do print é diferente
-                #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
-                #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
-            #else:
-                #print 'CEP', cep, 'nao encontrado'
-'''
+'''                    
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
