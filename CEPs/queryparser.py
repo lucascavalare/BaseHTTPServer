@@ -1,4 +1,5 @@
-import urlparse
+
+    import urlparse
 
 # Separa os pares (nome,valor) contidos numa url contendo os
 # dados de um formulario devolvidos pelo pelo navegador (usando GET).
@@ -11,33 +12,37 @@ def parse(url):
     st = 0
     nome = ''
     valor = ''
-    query += '?'
+    query += '&'
     for ch in query:
         if st == 0:
-            if(ch != '/')and(ch != '?'):
+            if(ch != '/')and(ch != '?')and(ch !='&'):
                 st = 1
                 nome += ch
         elif st == 1:
             if(ch == '='):
                 st = 2
-            else:         
+            else:
                 nome += ch
         elif st == 2:
             st = 3
-            if(ch != '&'):
-                valor += ch
-            else:
-                res[str(nome)] = str(valor)
-                st = 0
-        elif st == 3:              
-            if(ch == '&'):
-                res[str(nome)] = str(valor)
-                    nome = ''
-                    valor = ''
-                    st = 0
-            else:
-                valor += ch
-      
+               if ch != '&':
+                   valor += ch
+               else:
+                   res[str(nome)] = str(valor)
+                   nome = ''
+                   valor = ''
+                   st = 0
+              elif st == 3:
+               if(ch == '&'):
+                   res[str(nome)] = str(valor)
+                   nome = ''
+                   valor = ''
+                   st = 0
+               else:
+                   valor += ch
+    return res
                 
     
+
+
 
