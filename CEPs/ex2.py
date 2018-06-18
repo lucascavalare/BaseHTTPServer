@@ -11,24 +11,27 @@ import json, os, fnmatch
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
+def consulta(cep):
+    for file in os.listdir('.'):
+        if fnmatch.fnmatch(file, '*.json'):
+            f = open(file)
+            txt = f.read()
+            lista = json.loads(txt)
 
-for file in os.listdir('.'):
-    if fnmatch.fnmatch(file, '*.json'):
-        f = open(file)
-        txt = f.read()
-        lista = json.loads(txt)
-     
-        mapa = {}
-        for elemento in lista:
-            cep = elemento['CEP']
-            mapa[cep] = elemento
-        #print mapa
-            if cep in mapa.keys():
-                dados = mapa[cep]
-                jsonData = json.dumps(dados, indent=8)
-                if '49500244' in jsonData:
-                    #dados[cep] = jsonData
+            mapa = {}
+            for elemento in lista:
+                cep = elemento['CEP']
+                mapa[cep] = elemento
+                #print mapa
+                if cep in mapa.keys():
+                    dados = mapa[cep]
+                    jsonData = json.dumps(dados, indent=8)
+                    if '49500244' in jsonData:
+                            #dados[cep] = jsonData
                     print(jsonData)
+                return(jsonData)
+print (consulta(JsonData)
+       
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
@@ -53,7 +56,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
 '''
 # rodar até ...
-httpserver.serve_forever()
+#httpserver.serve_forever()
 '''
 def criaMapa(lista):
     #for file in os.listdir('.'):
