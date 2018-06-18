@@ -1,6 +1,6 @@
 # -*- coding: cp1252 -*-
 import json, os, fnmatch
-import BaseHTTPSever
+import BaseHTTPServer
 
 import queryparser
 
