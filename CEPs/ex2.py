@@ -24,7 +24,7 @@ def carrega(cep):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             print(json.dumps(mapa, indent=8))
-                mapa = carrega('cep')
+            mapa = carrega('cep')
             #return mapa
                 if cep in mapa.keys():
                     dados = mapa[cep]
