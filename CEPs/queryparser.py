@@ -1,5 +1,5 @@
 
-    import urlparse
+import urlparse
 
 # Separa os pares (nome,valor) contidos numa url contendo os
 # dados de um formulario devolvidos pelo pelo navegador (usando GET).
