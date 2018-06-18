@@ -27,10 +27,12 @@ def consulta(cep):
                     dados = mapa[cep]
                     jsonData = json.dumps(dados, indent=8)
                     if '49500244' in jsonData:
-                        jsonData = ''
-                    return(jsonData)
-                    #print(jsonData)
-print(consulta[jsonData])
+                        print "CEP:", jsonData
+                        return
+                        #return [jsonData]
+                    
+                    
+print "CEP:" jsonData
        
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
