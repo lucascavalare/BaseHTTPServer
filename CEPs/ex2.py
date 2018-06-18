@@ -25,7 +25,7 @@ def carrega(cep):
                 mapa[cep] = elemento
             print(json.dumps(mapa, indent=8))
             #return mapa
- 
+''' 
 def consulta(cep):
     #global mapa
     if cep in mapa.keys():
@@ -39,6 +39,7 @@ mapa = carrega('cep')
 print 'mapa criado:',len(mapa) 
 
 consulta('49000007')
+'''
 #consulta('69301000')
 #consulta('69301011')
 #consulta('69301015')
