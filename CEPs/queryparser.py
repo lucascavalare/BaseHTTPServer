@@ -25,21 +25,21 @@ def parse(url):
                 nome += ch
         elif st == 2:
             st = 3
-                if ch != '&':
-                    valor += ch
-                else:
-                    res[str(nome)] = str(valor)
-                    nome = ''
-                    valor = ''
-                    st = 0
-               elif st == 3:
-                if(ch == '&'):
-                    res[str(nome)] = str(valor)
-                    nome = ''
-                    valor = ''
-                    st = 0
-                else:
-                    valor += ch
+            if ch != '&':
+                valor += ch
+            else:
+                res[str(nome)] = str(valor)
+                nome = ''
+                valor = ''
+                st = 0
+          elif st == 3:
+           if(ch == '&'):
+               res[str(nome)] = str(valor)
+               nome = ''
+               valor = ''
+               st = 0
+           else:
+               valor += ch
     return res
                 
     
