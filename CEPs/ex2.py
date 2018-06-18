@@ -37,7 +37,7 @@ print 'inicio'
 mapa = carrega('cep')
 print 'mapa criado:',len(mapa)
 
-consulta('69301000')
+consulta('69900001')
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
