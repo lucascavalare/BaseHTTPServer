@@ -25,14 +25,14 @@ def carrega(cep):
                 mapa[cep] = elemento
             print(json.dumps(mapa, indent=8))
             #return mapa
-''' 
-def consulta(cep):
-    #global mapa
-    if cep in mapa.keys():
-        dados = mapa[cep]          
-        print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
-    else:
-        print 'CEP', cep, 'não encontrado'
+ 
+#def consulta(cep):
+#    #global mapa
+#    if cep in mapa.keys():
+#        dados = mapa[cep]          
+#        print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+#    else:
+#        print 'CEP', cep, 'não encontrado'
 
 print 'inicio'
 mapa = carrega('cep')
