@@ -15,7 +15,7 @@ import queryparser
 def resposta(path):
     # os pares (parametro, valor) são colocados no dicionário dict
     parms = queryparser.parse(path)
-    return json.dumps(parms)
+    return json.dumps(parms, indent=4)
     
 
 notfound = "GET: resource not found"
