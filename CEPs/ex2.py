@@ -53,10 +53,11 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
 # criação do servidor            
-httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
-'''
+#httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
+
 '''      
-rodar até ...
+'''
+      rodar até ...
 httpserver.serve_forever()
       
 def criaMapa(lista):
