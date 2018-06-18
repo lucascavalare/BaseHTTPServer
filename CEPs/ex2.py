@@ -33,7 +33,7 @@ def consulta(cep):
                 #else:
                     #print 'CEP', cep, 'não encontrado'
 
-consulta('69301011')
+print(consulta('69301011'))
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
