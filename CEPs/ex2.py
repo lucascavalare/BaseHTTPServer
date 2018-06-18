@@ -35,9 +35,9 @@ def consulta(cep):
 
 print 'inicio'
 mapa = carrega('cep')
-print 'mapa criado:', mapa 
+print 'mapa criado:',len(mapa) 
 
-#consulta('69900001')
+consulta('49000007')
 #consulta('69301000')
 #consulta('69301011')
 #consulta('69301015')
