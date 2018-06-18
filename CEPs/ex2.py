@@ -26,9 +26,9 @@ def carrega(cep):
             print(json.dumps(mapa, indent=8))
             mapa = carrega('cep')
             #return mapa
-                if cep in mapa.keys():
-                    dados = mapa[cep]
-                return dados
+            if cep in mapa.keys():
+                dados = mapa[cep]
+            return dados
  
 
                     
