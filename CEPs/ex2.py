@@ -34,11 +34,11 @@ def carrega(cep):
 #    else:
 #        print 'CEP', cep, 'não encontrado'
 
-print 'inicio'
+#print 'inicio'
 mapa = carrega('cep')
-print 'mapa criado:',len(mapa) 
+#print 'mapa criado:',len(mapa) 
 
-consulta('49000007')
+#consulta('49000007')
 
 #consulta('69301000')
 #consulta('69301011')
