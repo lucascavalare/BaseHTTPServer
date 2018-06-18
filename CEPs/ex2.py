@@ -18,7 +18,7 @@ def carrega(cep):
             txt = f.read()
             lista = json.loads(txt)
             
-            
+            global mapa
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
