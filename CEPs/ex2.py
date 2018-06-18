@@ -18,7 +18,7 @@ def consulta(cep):
             txt = f.read()
             lista = json.loads(txt)
                 
-            #mapa = {}
+            mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
