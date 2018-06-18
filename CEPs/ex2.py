@@ -58,7 +58,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         print parms
         if 'CEP' in parms:
             CEP = parms['CEP']
-            if cep == 'CEP'
+            if cep == 'CEP':
                 if 'cep' in parms:
                     cep = parms['CEP']
                     result = carrega(cep)
