@@ -23,7 +23,8 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            return mapa
+            print mapa
+            #return mapa
  
 def consulta(cep):
     #global mapa
