@@ -26,13 +26,12 @@ def consulta(cep):
 
                 
                 if cep in mapa.keys():
-                    dados = mapa[cep]      
-                #return jsonData    
-                    print(json.dumps('CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']))
+                    dados = mapa[cep]          
+                    print ('CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
                 else:
                     print 'CEP', cep, 'não encontrado'
 
-print(consulta('49000004'))
+#print(consulta('49000004'))
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
