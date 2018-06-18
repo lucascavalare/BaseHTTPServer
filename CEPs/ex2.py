@@ -26,9 +26,10 @@ def consulta(cep):
                 global mapa
                 if cep in mapa.keys():
                     dados = mapa[cep]
-                    print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
-                else:
-                    print 'CEP', cep, 'não encontrado'
+                    jsonData = json.dumps(dados, indent=8)
+                    #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+                #else:
+                    #print 'CEP', cep, 'não encontrado'
 
 consulta('69301011')
 
