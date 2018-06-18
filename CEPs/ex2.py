@@ -55,8 +55,10 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 # criação do servidor            
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
 '''
+      
 # rodar até ...
 #httpserver.serve_forever()
+      
 '''
 def criaMapa(lista):
     #for file in os.listdir('.'):
