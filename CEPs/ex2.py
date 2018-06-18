@@ -17,7 +17,7 @@ def consulta(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-print(consulta('69900001'))
+consulta('69900001')
                 
             mapa = {}
             for elemento in lista:
