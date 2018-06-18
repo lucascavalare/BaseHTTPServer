@@ -17,13 +17,14 @@ def consulta(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-                
+            
+            global mapa
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
 
-                global mapa
+                
                 if cep in mapa.keys():
                     dados = mapa[cep]
                     jsonData = json.dumps(dados, indent=8)
