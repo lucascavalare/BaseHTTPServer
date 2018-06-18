@@ -27,7 +27,8 @@ def consulta(cep):
                 
                 if cep in mapa.keys():
                     dados = mapa[cep]
-                    print(json.dumps(dados, indent=8))
+                    print dados
+                        #print(json.dumps(dados, indent=8))
                 #return jsonData    
                 #print 'CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
                 #else:
