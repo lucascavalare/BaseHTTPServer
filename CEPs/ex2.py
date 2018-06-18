@@ -33,9 +33,9 @@ def consulta(cep):
     else:
         print 'CEP', cep, 'não encontrado'
 
-print 'inicio'
+#print 'inicio'
 
-consulta('49000004')
+#consulta('49000004')
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
