@@ -26,7 +26,7 @@ for file in os.listdir('.'):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 jsonData = json.dumps(dados, indent=8)
-                if '49037563' in jsonData:
+                if '49500235' in jsonData:
                     #dados[cep] = jsonData
                     print(jsonData)
                 #python 3: a sintaxe do print é diferente
