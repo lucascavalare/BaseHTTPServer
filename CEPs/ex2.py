@@ -30,9 +30,7 @@ def carrega(cep):
                 dados = mapa[cep]
             return dados
  
-
                     
-'''                    
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -42,19 +40,22 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header("Content-type","text/json")
         self.end_headers()
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path)))
-        self.wfile.write(jsonData(self.path))
+        parms = queryparser.parse(self.path)
+        res = '<h3> Parametros:</h3>\n'
+        for k in parms.keys():
+            res += '<p>'+k+'="'+parms[k]+'"\n'
+        return res
+        self.wfile.write(carrega(self.path))
 
     # tratamento de uma requisicao POST
     def do_POST(self):
         self.wfile.write("<HTML><body>Operação POST não permitida.<BR><BR></body></HTML>");
 # criação do servidor            
 #httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
-
-'''      
-'''
+      
       rodar até ...
 httpserver.serve_forever()
-      
+'''      
 def criaMapa(lista):
     #for file in os.listdir('.'):
     #    if fnmatch.fnmatch(file, '*.json'):
