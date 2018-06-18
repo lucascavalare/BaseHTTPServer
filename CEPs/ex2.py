@@ -33,6 +33,8 @@ def consulta(cep):
     else:
         print 'CEP', cep, 'não encontrado'
 
+print 'inicio'
+
 consulta('49000004')
 
                     #jsonData = json.dumps(dados, indent=8)
