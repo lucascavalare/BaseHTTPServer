@@ -17,13 +17,12 @@ def consulta(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-consulta('69900001')
                 
-            mapa = {}
+            #mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            #return mapa
+print(consulta["cep"])
             #global mapa
                 if cep in mapa.keys():
                         dados = mapa[cep]
