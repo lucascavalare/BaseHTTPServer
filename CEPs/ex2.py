@@ -23,7 +23,7 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            print mapa
+            print(json.dumps(mapa, indent=8))
             #return mapa
  
 def consulta(cep):
