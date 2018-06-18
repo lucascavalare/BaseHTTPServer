@@ -23,7 +23,7 @@ def consulta(cep):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             return mapa
-            global mapa
+            #global mapa
             if cep in mapa.keys():
                 dados = mapa[cep]
                 print 'CEP:',cep
