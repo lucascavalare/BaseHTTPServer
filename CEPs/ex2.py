@@ -24,11 +24,11 @@ def consulta(cep):
                 mapa[cep] = elemento
             return mapa
             global mapa
-                if cep in mapa.keys():
-                    dados = mapa[cep]
-                    print 'CEP:',cep
-                else:
-                    print 'CEP', cep, 'não encontrado'
+            if cep in mapa.keys():
+                dados = mapa[cep]
+                print 'CEP:',cep
+            else:
+                print 'CEP', cep, 'não encontrado'
 consulta('69301000')
 
                     #jsonData = json.dumps(dados, indent=8)
