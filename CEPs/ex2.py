@@ -13,11 +13,12 @@ import queryparser
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
+'''
 def resposta(path):
     # os pares (parametro, valor) são colocados no dicionário dict
     parms = queryparser.parse(path)
     return json.dumps(parms)
-                      
+'''                      
 def carrega(cep):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
@@ -36,14 +37,14 @@ def carrega(cep):
             if cep in mapa.keys():
                 dados = mapa[cep]
             return dados
- 
+''' 
 def getParms(path):
     parms = queryparser.parse(path)
     res = '<h3> Parâmetros:</h3>\n'
     for k in parms.keys():
         res += '<p>'+k+'="'+parms[k]+'"\n'
     return res
-                    
+'''                    
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -53,7 +54,17 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header("Content-type","text/json")
         self.end_headers()
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
-        self.wfile.write(carrega(self.path))
+        parms = queryparser.parse(self.path)
+        print parms
+        if 'CEP' in parms:
+            CEP = parms['CEP']
+            if cep == 'CEP'
+                if 'cep' in parms:
+                    cep = parms['CEP']
+                    result = carrega(cep)
+                else:
+                    result = { 'erro': 'parametro "cep" ausente' }
+        self.wfile.write(json.dumps(result))
 
     # tratamento de uma requisicao POST
     def do_POST(self):
