@@ -11,27 +11,29 @@ import json, os, fnmatch
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
-def consulta(cep):
+def carrega(cep):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
             
-            global mapa
+            
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
+            return mapa
+ 
+def consulta(cep):
+    global mapa
+    if cep in mapa.keys():
+        dados = mapa[cep]          
+        print ('CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+    else:
+        print 'CEP', cep, 'não encontrado'
 
-                
-                if cep in mapa.keys():
-                    dados = mapa[cep]          
-                    print ('CEP:',cep,'Estado:',dados['Estado'],'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
-                else:
-                    print 'CEP', cep, 'não encontrado'
-
-#print(consulta('49000004'))
+consulta('49000004')
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
