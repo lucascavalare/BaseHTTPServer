@@ -32,14 +32,14 @@ def parse(url):
                 nome = ''
                 valor = ''
                 st = 0
-          elif st == 3:
-           if(ch == '&'):
-               res[str(nome)] = str(valor)
-               nome = ''
-               valor = ''
-               st = 0
-           else:
-               valor += ch
+           elif st == 3:
+            if(ch == '&'):
+                res[str(nome)] = str(valor)
+                nome = ''
+                valor = ''
+                st = 0
+            else:
+                valor += ch
     return res
                 
     
