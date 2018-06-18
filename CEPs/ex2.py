@@ -29,7 +29,7 @@ def consulta(cep):
                     if '49500244' in jsonData:
                         return(jsonData)
                     #print(jsonData)
-print(consulta(jsonData))
+print(consulta(cep))
        
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
