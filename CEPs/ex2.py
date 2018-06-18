@@ -22,7 +22,7 @@ def consulta(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-                #print mapa
+            return mapa
                 global mapa
                 if cep in mapa.keys():
                     dados = mapa[cep]
@@ -38,7 +38,7 @@ consulta('69301000')
                         #return [jsonData]
                     
                     
-print "CEP:",jsonData
+#print "CEP:",jsonData
        
                 #python 3: a sintaxe do print é diferente
                 #print 'CEP:',cep,'Estado:',jsonData[3],'Cidade:',jsonData[5],'Bairro:',jsonData[4]
