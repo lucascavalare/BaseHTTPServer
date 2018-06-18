@@ -35,7 +35,7 @@ def consulta(cep):
 
 #print 'inicio'
 
-#consulta('49000004')
+consulta('49000004')
 
                     #jsonData = json.dumps(dados, indent=8)
                     #if '49500244' in jsonData:
