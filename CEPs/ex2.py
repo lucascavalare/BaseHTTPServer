@@ -41,7 +41,7 @@ print(carrega('49000001')
             #    dados = mapa[cep]
             #return dados
                 
-''' 
+'''
 def getParms(path):
     #parms = queryparser.parse(path)
     #res = '<h3> Parâmetros:</h3>\n'
@@ -109,4 +109,4 @@ consulta('69301015')
 consulta('69301020')
 consulta('69301030')
 consulta('13085185')   # CEP não presente nessa UF
-'''
+
