@@ -13,12 +13,12 @@ import queryparser
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
-
+'''
 def resposta(path):
     # os pares (parametro, valor) são colocados no dicionário dict
     parms = queryparser.parse(path)
     return json.dumps(parms)
-                      
+'''                      
 def carrega(cep):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
@@ -36,16 +36,17 @@ def carrega(cep):
             #return mapa
             if cep in mapa.keys():
                 dados = mapa[cep]
-            return dados
+            print(dados)
 ''' 
 def getParms(path):
-    parms = queryparser.parse(path)
-    res = '<h3> Parâmetros:</h3>\n'
+    #parms = queryparser.parse(path)
+    #res = '<h3> Parâmetros:</h3>\n'
     for k in parms.keys():
         #res += '<p>'+k+'="'+parms[k]+'"\n'
         res += 'CEP'+k+'="'+parms[k]+'"\n'
     return res
-'''                    
+'''
+'''
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -55,12 +56,9 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header("Content-type","text/json")
         self.end_headers()
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
-        #parms = queryparser.parse(self.path)
-        #print parms
-        #for cep in mapa.keys():
-        #    if cep == 'CEP':
-        #        cep = mapa[cep]
-        #        result = carrega(cep)
+        
+        for cep in dados['cep']:
+            print(cep['CEP'])
                 
         self.wfile.write(carrega(self.path))
 
@@ -73,7 +71,7 @@ httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo)
       
 #rodar até ...
 httpserver.serve_forever()
-
+'''
 '''      
 def criaMapa(lista):
     #for file in os.listdir('.'):
