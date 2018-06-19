@@ -58,6 +58,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #parms = queryparser.parse(self.path)
         #print parms
         global mapa
+        mapa = {}
         for cep in mapa.keys():
             if cep == 'CEP':
                 cep = mapa[cep]
