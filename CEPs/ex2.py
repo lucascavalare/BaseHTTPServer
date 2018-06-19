@@ -49,8 +49,7 @@ def getParms(path):
         #res += '<p>'+k+'="'+parms[k]+'"\n'
         res += 'CEP'+k+'="'+parms[k]+'"\n'
     return res
-'''
-'''
+    
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
