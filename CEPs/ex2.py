@@ -31,13 +31,13 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            #print(json.dumps(mapa, indent=8))
-            mapa = carrega('cep')
+            print(json.dumps(mapa, indent=8))
+            #mapa = carrega('cep')
             #return mapa
-            if cep in mapa.keys():
-                dados = mapa[cep]
-            return dados
-print(carrega('49000001'))
+            #if cep in mapa.keys():
+            #    dados = mapa[cep]
+            #return dados
+
 ''' 
 def getParms(path):
     #parms = queryparser.parse(path)
