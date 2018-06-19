@@ -56,7 +56,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
         parms = queryparser.parse(self.path)
         print parms
-        if cep in parms:
+        if 'CEP' in parms:
             cep = parms['CEP']
             if cep == 'CEP':
                 if 'cep' in parms:
