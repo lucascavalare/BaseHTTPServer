@@ -26,6 +26,7 @@ def carrega(cep):
             txt = f.read()
             lista = json.loads(txt)
             print(lista)
+'''                
             global mapa
             mapa = {}
             for elemento in lista:
@@ -37,7 +38,7 @@ def carrega(cep):
             #if cep in mapa.keys():
             #    dados = mapa[cep]
             #return dados
-
+'''
 ''' 
 def getParms(path):
     #parms = queryparser.parse(path)
