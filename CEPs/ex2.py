@@ -32,6 +32,8 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
+            return mapa
+
 print(carrega('49000001')  
             #mapa = carrega('cep')
             #return mapa
