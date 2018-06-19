@@ -27,11 +27,11 @@ def carrega(cep):
             lista = json.loads(txt)
         print lista
         
-            global mapa
-            mapa = {}
-            for elemento in lista:
-                cep = elemento['CEP']
-                mapa[cep] = elemento
+            #global mapa
+            #mapa = {}
+            #for elemento in lista:
+            #    cep = elemento['CEP']
+            #    mapa[cep] = elemento
                 
             #mapa = carrega('cep')
             #return mapa
