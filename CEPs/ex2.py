@@ -31,7 +31,7 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            print(mapa, indent=8)
+            print(mapa)
             #mapa = carrega('cep')
             #return mapa
             #if cep in mapa.keys():
