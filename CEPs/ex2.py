@@ -35,9 +35,15 @@ def carrega(cep):
             return mapa
 
 print 'inicio'
-mapa = carrega('RR')
+mapa = carrega('SP')
 print 'mapa:',len(mapa)
-carrega('49000001')  
+
+carrega('69301000')
+carrega('69301011')
+carrega('69301015')
+carrega('69301020')
+carrega('69301030')
+carrega('13085185')  
             #mapa = carrega('cep')
             #return mapa
             #if cep in mapa.keys():
