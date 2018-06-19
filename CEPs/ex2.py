@@ -37,7 +37,7 @@ def carrega(cep):
             if cep in mapa.keys():
                 dados = mapa[cep]
             return dados
- 
+''' 
 def getParms(path):
     parms = queryparser.parse(path)
     res = '<h3> Parâmetros:</h3>\n'
@@ -45,7 +45,7 @@ def getParms(path):
         #res += '<p>'+k+'="'+parms[k]+'"\n'
         res += 'CEP'+k+'="'+parms[k]+'"\n'
     return res
-                    
+'''                    
 class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
@@ -65,7 +65,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #            result = carrega('cep')
         #        else:
         #            result = { 'erro': 'parametro "cep" ausente' }
-        self.wfile.write(resposta(self.path))
+        self.wfile.write(carrega(self.path))
 
     # tratamento de uma requisicao POST
     def do_POST(self):
