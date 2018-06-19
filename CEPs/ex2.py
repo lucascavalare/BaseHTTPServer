@@ -34,7 +34,10 @@ def carrega(cep):
                 mapa[cep] = elemento
             return mapa
 
-print(carrega('49000001')  
+print 'inicio'
+mapa = carrega()
+print 'mapa:',len(mapa)
+carrega('49000001')  
             #mapa = carrega('cep')
             #return mapa
             #if cep in mapa.keys():
