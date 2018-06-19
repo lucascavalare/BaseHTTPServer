@@ -35,7 +35,7 @@ def carrega(cep):
             return mapa
 
 print 'inicio'
-mapa = carrega(cep)
+mapa = carrega('RR')
 print 'mapa:',len(mapa)
 carrega('49000001')  
             #mapa = carrega('cep')
