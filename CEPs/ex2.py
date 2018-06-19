@@ -35,6 +35,6 @@ def carrega(cep):
             #return mapa
             mapa = carrega('cep')
             #return mapa
-            if cep in mapa.keys():
-                dados = mapa[cep]
-            print dados
+            #if cep in mapa.keys():
+            #    dados = mapa[cep]
+            #print dados
