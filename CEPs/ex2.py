@@ -36,7 +36,8 @@ def carrega(cep):
             #return mapa
             if cep in mapa.keys():
                 dados = mapa[cep]
-            print(dados)
+            return dados
+carrega('49000001')
 ''' 
 def getParms(path):
     #parms = queryparser.parse(path)
