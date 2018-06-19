@@ -32,11 +32,9 @@ def carrega(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            return mapa
-
-
-            #mapa = carrega('cep')
             #return mapa
-            #if cep in mapa.keys():
-            #    dados = mapa[cep]
-            #return dados
+            mapa = carrega('cep')
+            #return mapa
+            if cep in mapa.keys():
+                dados = mapa[cep]
+            print dados
