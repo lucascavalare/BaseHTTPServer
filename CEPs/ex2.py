@@ -50,6 +50,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
 
     # tratamento de uma requisicao GET
     def do_GET(self):
+        global mapa
         print self.path
         self.send_response(200)
         self.send_header("Content-type","text/json")
@@ -57,8 +58,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
         #parms = queryparser.parse(self.path)
         #print parms
-        global mapa
-        mapa = {}
+       
         for cep in mapa.keys():
             if cep == 'CEP':
                 cep = mapa[cep]
