@@ -57,12 +57,12 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
         #parms = queryparser.parse(self.path)
         #print parms
-        for cep in mapa.keys()
+        for cep in mapa.keys():
             if cep == 'CEP':
                 cep = mapa[cep]
-                result = resposta(self.path)
+                result = carrega(self.path)
                 
-        self.wfile.write(carrega(self.path))
+        self.wfile.write(json.dumps(result))
 
     # tratamento de uma requisicao POST
     def do_POST(self):
