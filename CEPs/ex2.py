@@ -33,8 +33,8 @@ def carrega(cep):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             #return mapa
-            mapa = carrega('cep')
-            #return mapa
+                mapa = carrega('cep')
+            print(mapa)
             #if cep in mapa.keys():
             #    dados = mapa[cep]
             #print dados
