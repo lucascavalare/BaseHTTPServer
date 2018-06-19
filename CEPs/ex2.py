@@ -57,6 +57,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
         #parms = queryparser.parse(self.path)
         #print parms
+        global mapa
         for cep in mapa.keys():
             if cep == 'CEP':
                 cep = mapa[cep]
