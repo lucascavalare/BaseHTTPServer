@@ -64,7 +64,7 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
                     result = carrega('cep')
                 else:
                     result = { 'erro': 'parametro "cep" ausente' }
-        self.wfile.write(carrega(self.path))
+        self.wfile.write(result)
 
     # tratamento de uma requisicao POST
     def do_POST(self):
