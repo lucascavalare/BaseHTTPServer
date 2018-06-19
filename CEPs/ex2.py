@@ -102,8 +102,7 @@ def consulta(cep):
 print 'inicio'
 #mapa = criaMapa('RR')
 print 'mapa criado tamanho:',len(mapa)
-'''
-'''
+
 consulta('77001004')
 consulta('69301011')
 consulta('69301015')
