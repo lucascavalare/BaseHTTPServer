@@ -56,12 +56,12 @@ class ServidorExemplo(BaseHTTPServer.BaseHTTPRequestHandler):
         #self.wfile.write(htmlpage.replace('[parms]',getParms(self.path))
         parms = queryparser.parse(self.path)
         print parms
-        if 'CEP' in parms:
-            CEP = parms['CEP']
+        if cep in parms:
+            cep = parms['CEP']
             if cep == 'CEP':
                 if 'cep' in parms:
-                    cep = parms['CEP']
-                    result = carrega(cep)
+                    #cep = parms['CEP']
+                    result = carrega('cep')
                 else:
                     result = { 'erro': 'parametro "cep" ausente' }
         self.wfile.write(carrega(self.path))
