@@ -24,6 +24,6 @@ def criaMapa(uf):
     return mapa
 
 mapa = criaMapa('RR')
-print(criaMapa(uf))
+#print(criaMapa(uf))
 
 criaMapa('69301011')
