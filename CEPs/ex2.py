@@ -25,16 +25,21 @@ def carrega(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-            print(json.dumps(lista))
+        return lista
         
-            #global mapa
-            #mapa = {}
-            #for elemento in lista:
-            #    cep = elemento['CEP']
-            #    mapa[cep] = elemento
-            #return mapa
+            global mapa
+            mapa = {}
+            for elemento in lista:
+                cep = elemento['CEP']
+                mapa[cep] = elemento
+            return mapa
             #    mapa = carrega('cep')
             #print(mapa)
-            #if cep in mapa.keys():
-            #    dados = mapa[cep]
-            #print dados
+                if cep in mapa.keys():
+                    dados = mapa[cep]
+                return dados
+
+print `inicio`
+mapa = carrega('RR')
+print 'mapa criado:',len(mapa)
+
