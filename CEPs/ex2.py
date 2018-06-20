@@ -21,7 +21,7 @@ def consulta(cep):
                 if cep in mapa.keys():
                     dados = mapa[cep]
                     jsonData = json.dumps(dados, indent=8)
-                    if '72800020' in jsonData:
+                    if cep in jsonData:
                         #print(jsonData)
                         return jsonData
 print(consulta('72800025')) 
