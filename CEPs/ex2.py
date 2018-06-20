@@ -22,7 +22,7 @@ for file in os.listdir('.'):
                 print(lista)
 '''
                      
-def consulta(cep):
+def consulta():
         # 'list' for files in directory
         for file in os.listdir('.'):
                 # 'test' if filenames match the pattern
@@ -34,8 +34,7 @@ def consulta(cep):
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
                         # print the list
-                return lista
-print(consulta('69301000'))
+                print lista
                         #global mapa
                         #mapa = {}
                         #for elemento in lista:
