@@ -14,21 +14,23 @@ import queryparser
         -- consulta ao dicionário/mapa pelo CEP
 '''
                      
-def criaMapa(uf):
+def criaMapa(cep):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-            print lista
-'''                
+            #print lista                
             global mapa
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            return mapa
-
+            #return mapa
+                if cep in mapa.keys():
+                    dados = mapa[cep]
+                print dados
+'''                
 def consulta(cep):
     global mapa
 #    mapa = carrega('cep')
