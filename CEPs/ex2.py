@@ -25,14 +25,14 @@ def criaMapa(uf):
                         txt = f.read()
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
-                # print the list
-                #return lista 
+                        # print the list
+                        #return lista 
                         #global mapa
-                        mapa = {}
-                        for elemento in lista:
-                                cep = elemento['CEP']
-                                mapa[cep] = elemento
-                        return mapa
+                        #mapa = {}
+                        #for elemento in lista:
+                        #        cep = elemento['CEP']
+                        #        mapa[cep] = elemento
+                        #return mapa
 '''
 def consulta(cep):
     global mapa
