@@ -32,7 +32,7 @@ def criaMapa(uf):
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             return mapa
-def consulta(cep)
+def consulta(cep):
     global mapa
 #    mapa = carrega('cep')
             #print(mapa)
