@@ -29,7 +29,9 @@ def criaMapa(cep):
             #return mapa
                 if cep in mapa.keys():
                     dados = mapa[cep]
-                print dados
+                return dados
+print(criaMapa('69301000')
+      
 '''                
 def consulta(cep):
     global mapa
