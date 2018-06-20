@@ -19,27 +19,31 @@ def resposta(path):
     parms = queryparser.parse(path)
     return json.dumps(parms)
 '''                      
-def consulta(cep):
+def criaMapa(uf):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-        print lista
-'''        
+        
             global mapa
             mapa = {}
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
             return mapa
-            #    mapa = carrega('cep')
+def consulta(cep)
+    global mapa
+#    mapa = carrega('cep')
             #print(mapa)
-            if cep in mapa.keys():
-                dados = mapa[cep]
-                print dados
-'''
-#print 'inicio'
-#mapa = carrega('RR')
-#print 'mapa criado:',len(mapa)
+    if cep in mapa.keys():
+        dados = mapa[cep]
+        print 'CEP:',cep
+    else:
+        print 'CEP:', cep, 'nao encontrado'
+        
+print 'inicio'
+mapa = criaMapa('RR')
+print 'mapa criado:',len(mapa)
 
+consulta('69301000')
