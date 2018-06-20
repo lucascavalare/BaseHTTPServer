@@ -23,5 +23,5 @@ def criaMapa(uf):
         mapa[cep] = elemento    
     return mapa
 
-consulta('69301000')
+print(criaMapa(mapa))
 
