@@ -14,17 +14,18 @@ import queryparser
         -- consulta ao dicionário/mapa pelo CEP
 '''
                      
-def criaMapa(uf):
+def criaMapa(cep):
         # 'list' for files in directory
         for file in os.listdir('.'):
                 # 'test' if filenames match the pattern
                 if fnmatch.fnmatch(file, '*.json'):
                         # 'open' files that match
                         f = open(file)
+                        print(f)
                         # do read file (stored in txt)
-                        txt = f.read()
+                        #txt = f.read()
                         # parsing JSON (result in lista)
-                        lista = json.loads(txt)
+                        #lista = json.loads(txt)
                         # print the list
                         #return lista 
                         #global mapa
