@@ -47,3 +47,4 @@ mapa = criaMapa('RR')
 print 'mapa criado:',len(mapa)
 
 consulta('69301000')
+consulta('69399000')
