@@ -35,7 +35,7 @@ def criaMapa(cep):
                         return mapa
 print 'inicio'
 mapa = criaMapa('SP')
-print 'mapa criado:',len(mapa)
+print 'mapa criado:',len(lista)
 
 
 
