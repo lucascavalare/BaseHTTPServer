@@ -17,12 +17,12 @@ def consulta(cep):
             for elemento in lista:
                 cep = elemento['CEP']
                 mapa[cep] = elemento
-            return mapa
-                #if cep in mapa.keys():
-                #    dados = mapa[cep]
-                #    jsonData = json.dumps(dados, indent=8)
-                #    if '49000001' in jsonData:
-                #        print jsonData
+                #return mapa
+                if cep in mapa.keys():
+                    dados = mapa[cep]
+                    jsonData = json.dumps(dados, indent=8)
+                    if '49000001' in jsonData:
+                        print jsonData
                         #return jsonData
-print(consulta('49000001')) 
+#print(consulta('49000001')) 
 
