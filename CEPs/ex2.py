@@ -25,16 +25,17 @@ for file in os.listdir('.'):
 def consulta(cep):
         # 'list' for files in directory
         for file in os.listdir('.'):
+                print file
                 # 'test' if filenames match the pattern
-                if fnmatch.fnmatch(file, '*.json'):
+                #if fnmatch.fnmatch(file, '*.json'):
                         # 'open' files that match
-                        f = open(file)
+                        #f = open(file)
                         # do read file (stored in txt)
-                        txt = f.read()
+                        #txt = f.read()
                         # parsing JSON (result in lista)
-                        lista = json.loads(txt)
+                        #lista = json.loads(txt)
                         # print the list
-                        print(json.loads(lista))
+                        #print(json.loads(lista))
                         #global mapa
                         #mapa = {}
                         #for elemento in lista:
