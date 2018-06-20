@@ -39,7 +39,7 @@ def carrega(cep):
                 dados = mapa[cep]
             return dados
 
-print `inicio`
+print 'inicio'
 mapa = carrega('RR')
 print 'mapa criado:',len(mapa)
 
