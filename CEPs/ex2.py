@@ -32,7 +32,7 @@ def criaMapa(cep):
                         for elemento in lista:
                                 cep = elemento['CEP']
                                 mapa[cep] = elemento
-                        print mapa
+                        print(mapa)
 
 
             #return lista                
