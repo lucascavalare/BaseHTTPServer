@@ -42,8 +42,17 @@ def consulta(cep):
         print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
     else:
         print 'CEP', cep, 'nao encontrado'
-#print(criaMapa('SP'))
 
+print 'inicio'
+mapa = criaMapa('SP')
+print 'mapa criado:',len(mapa)
+
+consulta('69301000')
+consulta('69301011')
+consulta('69301015')
+consulta('69301020')
+consulta('69301030')
+consulta('13085185')
 
 
 
