@@ -27,7 +27,7 @@ def criaMapa(cep):
                         lista = json.loads(txt)
                         # print the list
                 print lista
-criaMapa(cep)
+criaMapa('69397000')
 
             #return lista                
             #global mapa
