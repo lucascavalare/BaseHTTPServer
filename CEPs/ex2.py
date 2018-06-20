@@ -26,7 +26,7 @@ def criaMapa(cep):
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
                         # print the list
-                print lista
+                        #print lista
 criaMapa('69397000')
 
             #return lista                
