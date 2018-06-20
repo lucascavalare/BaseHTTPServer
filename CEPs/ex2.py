@@ -37,9 +37,9 @@ def carrega(cep):
             #print(mapa)
             if cep in mapa.keys():
                 dados = mapa[cep]
-            return dados
+            print dados
 
-print 'inicio'
-mapa = carrega('RR')
-print 'mapa criado:',len(mapa)
+#print 'inicio'
+#mapa = carrega('RR')
+#print 'mapa criado:',len(mapa)
 
