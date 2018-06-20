@@ -23,5 +23,7 @@ def criaMapa(uf):
         mapa[cep] = elemento    
     return mapa
 
+mapa = criaMapa('RR')
 print(criaMapa(uf))
 
+criaMapa('69301011')
