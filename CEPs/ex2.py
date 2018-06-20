@@ -19,7 +19,7 @@ for file in os.listdir('.'):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 jsonData = json.dumps(dados, indent=8)
-                if '69301000' in jsonData:
+                if '49000007' in jsonData:
                     print(jsonData)
 
 
