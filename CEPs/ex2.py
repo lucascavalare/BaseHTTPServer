@@ -19,7 +19,7 @@ def resposta(path):
     parms = queryparser.parse(path)
     return json.dumps(parms)
 '''                      
-def carrega(cep):
+def consulta(cep):
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
             f = open(file)
@@ -37,7 +37,7 @@ def carrega(cep):
             #print(mapa)
             if cep in mapa.keys():
                 dados = mapa[cep]
-            print dados
+                print dados
 
 #print 'inicio'
 #mapa = carrega('RR')
