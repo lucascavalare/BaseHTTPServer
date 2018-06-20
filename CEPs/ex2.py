@@ -6,7 +6,7 @@ import json
 import os
 import fnmatch
 
-def consulta(cep):
+#def consulta(cep):
 
     for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
