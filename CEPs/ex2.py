@@ -25,8 +25,8 @@ def consulta(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-        #return lista
-        
+        print lista
+'''        
             global mapa
             mapa = {}
             for elemento in lista:
@@ -38,7 +38,7 @@ def consulta(cep):
             if cep in mapa.keys():
                 dados = mapa[cep]
                 print dados
-
+'''
 #print 'inicio'
 #mapa = carrega('RR')
 #print 'mapa criado:',len(mapa)
