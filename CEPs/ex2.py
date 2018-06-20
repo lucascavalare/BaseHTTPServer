@@ -21,7 +21,7 @@ for file in os.listdir('.'):
                 if cep in mapa.keys():
                     dados = mapa[cep]
                     jsonData = json.dumps(dados, indent=8)
-                    if '72800025' in jsonData:
+                    if '30001970' in jsonData:
                         print(jsonData)
                         #return jsonData
 #print(consulta('49000001')) 
