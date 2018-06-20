@@ -35,7 +35,7 @@ def consulta(cep):
                         lista = json.loads(txt)
                         # print the list
                 return lista
-print(consulta(f))
+print(consulta('69301000'))
                         #global mapa
                         #mapa = {}
                         #for elemento in lista:
