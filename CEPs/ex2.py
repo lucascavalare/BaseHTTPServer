@@ -14,7 +14,7 @@ import queryparser
         -- consulta ao dicionário/mapa pelo CEP
 '''
                      
-def criaMapa(cep):
+def criaMapa(uf):
         # 'list' for files in directory
         for file in os.listdir('.'):
                 # 'test' if filenames match the pattern
@@ -33,7 +33,16 @@ def criaMapa(cep):
                                 cep = elemento['CEP']
                                 mapa[cep] = elemento
                         return mapa
-print(criaMapa('SP'))
+
+def consulta(cep):
+    global mapa
+    if cep in mapa.keys():
+        dados = mapa[cep]
+        #python 3: a sintaxe do print é diferente
+        print 'CEP:',cep,'Cidade:',dados['Cidade'],'Bairro:',dados['Bairro']
+    else:
+        print 'CEP', cep, 'nao encontrado'
+#print(criaMapa('SP'))
 
 
 
