@@ -21,9 +21,6 @@ def criaMapa(uf):
     for elemento in lista:
         cep = elemento['CEP']
         mapa[cep] = elemento    
-    return mapa
+    print mapa
 
-mapa = criaMapa('RR')
-#print(criaMapa(uf))
 
-criaMapa('69301011')
