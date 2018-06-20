@@ -25,4 +25,3 @@ for file in os.listdir('.'):
                         print(jsonData)
                         #return jsonData
 #print(consulta('49000001')) 
-quit()
