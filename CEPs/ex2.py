@@ -25,7 +25,7 @@ def carrega(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-            print lista
+            print(json.dumps(lista))
         
             #global mapa
             #mapa = {}
