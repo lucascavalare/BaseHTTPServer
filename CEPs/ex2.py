@@ -20,7 +20,7 @@ def criaMapa(cep):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-            #print lista                
+            print lista                
             global mapa
             mapa = {}
             for elemento in lista:
@@ -30,4 +30,4 @@ def criaMapa(cep):
                 if cep in mapa.keys():
                     dados = mapa[cep]
                 return dados
-print(criaMapa('69397000'))
+#print(criaMapa('69397000'))
