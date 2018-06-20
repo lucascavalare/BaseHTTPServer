@@ -24,5 +24,5 @@ def consulta(cep):
                     if 'CEP' in jsonData:
                         #print(jsonData)
                         return jsonData
-print(consulta('72800025')) 
+consulta('72800025') 
 
