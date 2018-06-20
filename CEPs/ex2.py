@@ -31,22 +31,3 @@ def criaMapa(cep):
                     dados = mapa[cep]
                 return dados
 print(criaMapa('RR')
-      
-'''                
-def consulta(cep):
-    global mapa
-#    mapa = carrega('cep')
-            #print(mapa)
-    if cep in mapa.keys():
-        dados = mapa[cep]
-        print 'CEP:',cep
-    else:
-        print 'CEP:', cep, 'nao encontrado'
-        
-print 'inicio'
-mapa = criaMapa('RR')
-print 'mapa criado:',len(mapa)
-
-consulta('69301000')
-consulta('69399000')
-'''
