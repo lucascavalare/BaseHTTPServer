@@ -20,7 +20,7 @@ for file in os.listdir('.'):
             f = open(file)
             txt = f.read()
             lista = json.loads(txt)
-        print lista
+            print lista
             #return lista                
             #global mapa
             #mapa = {}
