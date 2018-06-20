@@ -33,7 +33,7 @@ def criaMapa(uf):
                                 cep = elemento['CEP']
                                 mapa[cep] = elemento
                         return mapa
-
+'''
 def consulta(cep):
     global mapa
     if cep in mapa.keys():
@@ -67,3 +67,4 @@ consulta('13085185')
                 #    dados = mapa[cep]
                 #return dados
 #print(criaMapa('69397000'))
+'''
