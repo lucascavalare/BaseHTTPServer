@@ -47,9 +47,9 @@ print 'inicio'
 mapa = criaMapa('RR')
 print 'mapa criado:',len(mapa)
 
-consulta('69301000')
-consulta('69301011')
-consulta('69301015')
+consulta('49000001')
+consulta('49000004')
+consulta('49000007')
 consulta('69301020')
 consulta('69301030')
 consulta('13085185')
