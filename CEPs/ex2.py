@@ -33,9 +33,7 @@ def criaMapa(cep):
                                 cep = elemento['CEP']
                                 mapa[cep] = elemento
                         return mapa
-print 'inicio'
-mapa = criaMapa('SP')
-print 'mapa criado:',len(lista)
+print(criaMapa('SP'))
 
 
 
