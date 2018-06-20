@@ -34,8 +34,8 @@ def consulta(cep):
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
                         # print the list
-                        return lista
-print(consulta(lista))
+                return lista
+print(consulta)
                         #global mapa
                         #mapa = {}
                         #for elemento in lista:
