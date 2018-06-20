@@ -6,8 +6,8 @@ import json
 import os
 import fnmatch
 
-def consulta(cep):
-    for file in os.listdir('.'):
+#def consulta(cep):
+for file in os.listdir('.'):
         if fnmatch.fnmatch(file, '*.json'):
             f = open(file)
             txt = f.read()
