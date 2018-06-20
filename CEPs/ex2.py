@@ -8,7 +8,7 @@ import json
 def criaMapa(uf):
     
     #'abre' o arquivo para leitura
-    f = open('ceps_' + * + '.json', 'r')
+    f = open('ceps_' + uf + '.json', 'r')
 
     # efetua a leitura do arquivo (dados lidos armazenados em txt)
     txt = f.read()
