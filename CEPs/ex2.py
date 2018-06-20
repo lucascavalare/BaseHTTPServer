@@ -30,7 +30,7 @@ def criaMapa(cep):
                 if cep in mapa.keys():
                     dados = mapa[cep]
                 return dados
-print(criaMapa('69301000')
+print(criaMapa('RR')
       
 '''                
 def consulta(cep):
