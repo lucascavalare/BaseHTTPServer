@@ -28,7 +28,7 @@ def criaMapa(cep):
                 # print the list
                 return lista 
 
-print(criaMapa('69397000'))
+
 
             #return lista                
             #global mapa
