@@ -19,13 +19,13 @@ def resposta(path):
     parms = queryparser.parse(path)
     return json.dumps(parms)
 '''                      
-#def carrega(cep):
-for file in os.listdir('.'):
-    if fnmatch.fnmatch(file, '*.json'):
-        f = open(file)
-        txt = f.read()
-        lista = json.loads(txt)
-        print(lista, indent=8)
+def carrega(cep):
+    for file in os.listdir('.'):
+        if fnmatch.fnmatch(file, '*.json'):
+            f = open(file)
+            txt = f.read()
+            lista = json.loads(txt)
+            print lista
         
             #global mapa
             #mapa = {}
