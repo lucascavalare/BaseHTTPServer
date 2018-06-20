@@ -25,9 +25,10 @@ def criaMapa(cep):
                         txt = f.read()
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
-                        # print the list
-                        #print lista
-criaMapa('69397000')
+                # print the list
+                return lista 
+
+print(criaMapa('69397000'))
 
             #return lista                
             #global mapa
