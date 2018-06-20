@@ -23,6 +23,6 @@ def consulta(cep):
                     jsonData = json.dumps(dados, indent=8)
                     if '72800020' in jsonData:
                         #print(jsonData)
-                    return jsonData
+                        return jsonData
 print(consulta('72800025')) 
 
