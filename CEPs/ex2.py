@@ -13,7 +13,13 @@ import queryparser
            a cada CEP os dados do endereço relativo ao mesmo
         -- consulta ao dicionário/mapa pelo CEP
 '''
-                     
+for file in os.listdir('.'):
+        if fnmatch.fnmatch(file, '*.json'):
+                f = open(file)
+                txt = f.read()
+                lista = json.loads(txt)
+                print(lista)
+'''                     
 def criaMapa(cep):
         # 'list' for files in directory
         for file in os.listdir('.'):
@@ -21,7 +27,6 @@ def criaMapa(cep):
                 if fnmatch.fnmatch(file, '*.json'):
                         # 'open' files that match
                         f = open(file)
-                        print(f)
                         # do read file (stored in txt)
                         #txt = f.read()
                         # parsing JSON (result in lista)
@@ -34,6 +39,7 @@ def criaMapa(cep):
                         #        cep = elemento['CEP']
                         #        mapa[cep] = elemento
                         #return mapa
+'''
 '''
 def consulta(cep):
     global mapa
