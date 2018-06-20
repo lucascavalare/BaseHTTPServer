@@ -25,16 +25,16 @@ for file in os.listdir('.'):
         f = open(file)
         txt = f.read()
         lista = json.loads(txt)
-        print lista
+    print lista
         
-            global mapa
-            mapa = {}
-            for elemento in lista:
-                cep = elemento['CEP']
-                mapa[cep] = elemento
+            #global mapa
+            #mapa = {}
+            #for elemento in lista:
+            #    cep = elemento['CEP']
+            #    mapa[cep] = elemento
             #return mapa
-                mapa = carrega('cep')
-            print(mapa)
+            #    mapa = carrega('cep')
+            #print(mapa)
             #if cep in mapa.keys():
             #    dados = mapa[cep]
             #print dados
