@@ -26,8 +26,13 @@ def criaMapa(cep):
                         # parsing JSON (result in lista)
                         lista = json.loads(txt)
                 # print the list
-                return lista 
-
+                #return lista 
+                        global mapa
+                        mapa = {}
+                        for elemento in lista:
+                                cep = elemento['CEP']
+                                mapa[cep] = elemento
+                        return mapa
 
 
             #return lista                
