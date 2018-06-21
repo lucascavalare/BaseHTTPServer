@@ -33,7 +33,7 @@ def consulta(path):
 notfound = "File not found"
 
 def resposta(path):
-    consulta(queryparser.parse(self.path))
+    consulta(queryparser.parse(path))
     #a = consulta(queryparser.parse(path))
     #return json.dumps(a, indent=8)
 '''
