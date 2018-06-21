@@ -25,7 +25,7 @@ def consulta(path):
             for d in lista:
                 for value in d.values():
                     if value==path:
-                        return d
+                        return json.dumps(d, indent=8) 
                         #print json.dumps(d, sort_keys=True, indent=4)
                         #return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
@@ -33,8 +33,9 @@ def consulta(path):
 notfound = "File not found"
 
 def resposta(path):
-    a = consulta(queryparser.parse(path))
-    return json.dumps(a, indent=8)
+    consulta(queryparser.parse(self.path))
+    #a = consulta(queryparser.parse(path))
+    #return json.dumps(a, indent=8)
 '''
     classe que estende BaseHHTPRequestHandler:
     -- redefine o método do_Get() para que faça o tratamento desejado
@@ -50,8 +51,8 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
                 # 'fecha' o cabeçalho
                 self.end_headers()
                 # 'escreve' o conteudo da resposta
-                #self.wfile.write(resposta(self.path))
-                self.wfile.write(json.dumps(resposta))
+                self.wfile.write(resposta(self.path))
+                #elf.wfile.write(json.dumps(resposta))
 '''
     Cria o servidor web, usando a classe definida acima,
     atendendo as requisições na porta 8080
