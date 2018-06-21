@@ -24,9 +24,9 @@ def consulta(path):
             for d in lista:
                 for value in d.values():
                     if value==path:
-                        #return d 
+                        return d 
                         #print json.dumps(d, sort_keys=True, indent=4)
-                        print 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
+                        #print 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
 ### em caso de url inválida 
 notfound = "File not found"
@@ -34,8 +34,8 @@ notfound = "File not found"
 def resposta(path):
     #consulta(queryparser.parse(path))
     a = consulta(queryparser.parse(path))
-    #return json.dumps(a, indent=8)/
-    return a
+    return json.dumps(a, indent=8)
+    #return a
 
 '''
     classe que estende BaseHHTPRequestHandler:
