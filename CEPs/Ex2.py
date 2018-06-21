@@ -50,7 +50,8 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
                 # 'fecha' o cabeçalho
                 self.end_headers()
                 # 'escreve' o conteudo da resposta
-                self.wfile.write(resposta(self.path))
+                #self.wfile.write(resposta(self.path))
+                selg.wfile.write(json.dumps(resposta))
 '''
     Cria o servidor web, usando a classe definida acima,
     atendendo as requisições na porta 8080
