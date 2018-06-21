@@ -27,7 +27,7 @@ def consulta(path):
                     if value==path:
                         #return d 
                         #print json.dumps(d, sort_keys=True, indent=4)
-                        return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado'], indent=8
+                        return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
 ### em caso de url inválida 
 notfound = "File not found"
