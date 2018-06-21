@@ -4,7 +4,6 @@
     -- trata apenas o método GET
     -- responde com um texto html fixo (htmlpage)
 '''
-import BaseHTTPServer
 import BaseHTTPServer, json, os, fnmatch
 import queryparser
 
@@ -25,17 +24,19 @@ def consulta(path):
             for d in lista:
                 for value in d.values():
                     if value==path:
-                        #return d 
+                        return d 
                         #print json.dumps(d, sort_keys=True, indent=4)
-                        return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
+                        #return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
 ### em caso de url inválida 
 notfound = "File not found"
 
 def resposta(path):
-    consulta(queryparser.parse(path))
-    #a = consulta(queryparser.parse(path))
-    #return json.dumps(a, indent=8)
+    #consulta(queryparser.parse(path))
+    a = consulta(queryparser.parse(path))
+    #return json.dumps(a, indent=8)/
+    return a
+
 '''
     classe que estende BaseHHTPRequestHandler:
     -- redefine o método do_Get() para que faça o tratamento desejado
