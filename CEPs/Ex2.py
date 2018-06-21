@@ -24,9 +24,9 @@ def consulta(path):
             for d in lista:
                 for value in d.values():
                     if value==path:
-                        return d 
+                        #return d 
                         #print json.dumps(d, sort_keys=True, indent=4)
-                        #return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
+                        print 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
 ### em caso de url inválida 
 notfound = "File not found"
