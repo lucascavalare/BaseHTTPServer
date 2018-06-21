@@ -47,8 +47,8 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
         def do_GET(self):
                 # inicia o envio da resposta c/ código de retorno 200 (OK)
                 self.send_response(200)
-                # define o cabeçalho da resposta (neste caso 'avisa' que o conteúdo será html)
-                self.send_header("Content-type","text/html")
+                # define o cabeçalho da resposta (neste caso 'avisa' que o conteúdo será json)
+                self.send_header("Content-type","text/json")
                 # 'fecha' o cabeçalho
                 self.end_headers()
                 # 'escreve' o conteudo da resposta
