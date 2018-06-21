@@ -25,7 +25,7 @@ def consulta(path):
             for d in lista:
                 for value in d.values():
                     if value==path:
-                        return json.dumps(d, indent=8) 
+                        return d 
                         #print json.dumps(d, sort_keys=True, indent=4)
                         #return 'CEP:',d['CEP'],'Cidade:',d['Cidade'],'Bairro:',d['Bairro'],'Estado:',d['Estado']
 
@@ -33,9 +33,9 @@ def consulta(path):
 notfound = "File not found"
 
 def resposta(path):
-    consulta(queryparser.parse(path))
-    #a = consulta(queryparser.parse(path))
-    #return json.dumps(a, indent=8)
+    #consulta(queryparser.parse(path))
+    a = consulta(queryparser.parse(path))
+    return json.dumps(a, indent=8)
 '''
     classe que estende BaseHHTPRequestHandler:
     -- redefine o método do_Get() para que faça o tratamento desejado
