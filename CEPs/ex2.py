@@ -60,13 +60,14 @@ class ServidorExemplo1(BaseHTTPServer.BaseHTTPRequestHandler):
                 # 'escreve' o conteudo da resposta
                 self.wfile.write(resposta(self.path))
 '''
+'''
     Cria o servidor web, usando a classe definida acima,
     atendendo as requisições na porta 8080
 '''
+'''
 httpserver = BaseHTTPServer.HTTPServer(("",8080), ServidorExemplo1)
-
+'''
 '''
     Ativa o serviço, 'ad infinitum' 
-'''
 httpserver.serve_forever()
 '''
