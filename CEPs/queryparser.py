@@ -41,7 +41,7 @@ def parse(url):
             else:
                 valor += ch
     #return res['CEP']
-     return res           
+    return res           
     
 
 
