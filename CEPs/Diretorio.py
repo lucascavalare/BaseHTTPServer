@@ -99,8 +99,8 @@ class Diretorio(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type","text/json")
         self.end_headers()
-        #parms = queryparser.parse(self.path)
-        #print parms
+        parms = queryparser.parse(self.path)
+        print parms
         if 'op' in parms:
             op = parms['op']
             if op == 'consulta':
