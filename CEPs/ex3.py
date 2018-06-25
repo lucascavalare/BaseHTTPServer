@@ -9,5 +9,5 @@ import BaseHTTPServer, json, os, fnmatch
 import queryparser
 import Diretorio
 
-Diretorio.consultaEstados('SC')
+#if Diretorio.consultaEstados
 print consultaEstados()
