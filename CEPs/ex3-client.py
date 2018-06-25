@@ -28,11 +28,11 @@ while 1:
   conn.request(cmd[0], cmd[1])
 '''
   #get response from server
-  rsp = conn.getresponse()
+rsp = conn.getresponse()
   
   #print server response and data
-  print(rsp.status, rsp.reason)
-  data_received = rsp.read()
-  print(data_received)
+print(rsp.status, rsp.reason)
+data_received = rsp.read()
+print(data_received)
   
 conn.close()   
