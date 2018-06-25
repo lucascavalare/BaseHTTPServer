@@ -16,7 +16,7 @@ import sys
 http_server = sys.argv[1]
 #create a connection
 conn = httplib.HTTPConnection(http_server)
-
+'''
 while 1:
   cmd = raw_input('input command (ex. GET index.html): ')
   cmd = cmd.split()
@@ -26,7 +26,7 @@ while 1:
   
   #request command to server
   conn.request(cmd[0], cmd[1])
-
+'''
   #get response from server
   rsp = conn.getresponse()
   
