@@ -4,15 +4,30 @@
     -- trata apenas o método GET
     -- responde com um texto html fixo (htmlpage)
 '''
-import BaseHTTPServer
+
 import BaseHTTPServer, json, os, fnmatch
 import queryparser
+import Diretorio
 
 ### texto fixo retornado como resposta ao get
 #def resposta(cep):
 #    parms = queryparser.parse(cep)
  #   return parms
 
+def test1():
+    d = {"SP":"souza:8080", "RJ":"rodrigues:8080","RN": "silva:8080", "RO":"oliveira:8080", "MG":"pereira:8080"}
+    r = {}
+    for s in d.keys():
+        r[registraServidor(s,d[s])] = d[s]
+    print r
+    print consultaEstados()
+    for s in d.keys():
+        print consultaServidor(s)
+    print consultaServidor('SC')
+    print consultaServidor('RJ')
+    for k in r.keys():
+        print removeServidor(r[k],k)
+'''
 def consulta(path):
     file = 0
     print path
@@ -41,7 +56,7 @@ def getParms(path):
     for k in d.keys():
         res += '<p>'+k+'="'+d[k]+'"\n'
     return res
-
+'''
 '''
     classe que estende BaseHHTPRequestHandler:
     -- redefine o método do_Get() para que faça o tratamento desejado
