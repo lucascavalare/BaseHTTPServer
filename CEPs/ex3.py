@@ -9,5 +9,5 @@ import BaseHTTPServer, json, os, fnmatch
 import queryparser
 import Diretorio
 
-print Diretorio.consultaEstados(estado)
+print Diretorio.consultaEstados()
     
