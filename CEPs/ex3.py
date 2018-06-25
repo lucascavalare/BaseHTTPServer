@@ -7,7 +7,7 @@
 
 import BaseHTTPServer, json, os, fnmatch
 import queryparser
-import Diretorio
+from Diretorio import *
 
 print Diretorio.consultaEstados()
     
