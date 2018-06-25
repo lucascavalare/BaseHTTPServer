@@ -10,4 +10,4 @@ import queryparser
 import Diretorio
 
 Diretorio.consultaEstados('SC')
-    print consultaEstados()
+   
