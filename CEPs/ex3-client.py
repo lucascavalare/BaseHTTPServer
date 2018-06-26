@@ -20,5 +20,5 @@ r1 = conn.getresponse()
 print r1.status, r1.reason
 '''
 h = httplib2.Http(".cache")
-resp, content = h.request("http://35.196.162.70:8080", "GET")
+resp, content = h.request("http://35.196.162.70:8080", "PUT", body="/?op=registro&estado=MG&url=http://mg.gov.br:8080", headers={'content-type':'text/json'})
 print json.dumps(resp, indent=5)
