@@ -135,9 +135,9 @@ class Diretorio(BaseHTTPServer.BaseHTTPRequestHandler):
     # tratamento de uma requisicao POST
     def do_POST(self):
         self.wfile.write("POST: operação inválida");
-        
-    def do_OPTIONS(self):
-        self.sendResponse(200)
+    
+    # tratamento de uma requisição PUT
+    def do_PUT(self): 
         self.processRequest()
 
 def criaDiretorio():
