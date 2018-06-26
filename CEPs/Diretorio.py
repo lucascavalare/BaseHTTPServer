@@ -97,6 +97,10 @@ class Diretorio(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_GET(self):
         print self.path
         self.send_response(200)
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "POST, , PUT, GET, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Authorization")
         self.send_header("Content-type","text/json")
         self.end_headers()
         parms = queryparser.parse(self.path)
