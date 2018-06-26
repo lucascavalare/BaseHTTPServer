@@ -20,5 +20,5 @@ r1 = conn.getresponse()
 print r1.status, r1.reason
 '''
 h = httplib2.Http(".cache")
-resp, content = h.request("http://35.196.162.70:8080", "GET", data=json.dumps(payload))
-print resp
+resp, content = h.request("http://35.196.162.70:8080", "GET")
+print json.dumps(resp)
