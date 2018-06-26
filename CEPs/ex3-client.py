@@ -12,7 +12,7 @@
 import httplib
 import sys
 
-conn = httplib.HTTPConnection('35.237.56.163', 8080)
+conn = httplib.HTTPConnection('35.196.162.70', 8080)
 conn.request("GET", "/?op=estados")
 r1 = conn.getresponse()
 print r1.status, r1.reason
