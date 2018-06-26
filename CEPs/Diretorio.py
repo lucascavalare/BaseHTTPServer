@@ -97,7 +97,6 @@ class Diretorio(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_GET(self):
         print self.path
         self.send_response(200)
-        self.processRequest()
         self.send_header("Content-type","text/json")
         self.end_headers()
         parms = queryparser.parse(self.path)
@@ -131,14 +130,18 @@ class Diretorio(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             result = { 'erro': 'parametro "op" ausente' }
         self.wfile.write(json.dumps(result))
-
+    
+    # tratamento de uma requisição PUT
+    def do_PUT(self): 
+        self.send_response(200)
+        self.send_header('Content-type', 'text/json')
+        self.end_headers()
+        
     # tratamento de uma requisicao POST
     def do_POST(self):
         self.wfile.write("POST: operação inválida");
     
-    # tratamento de uma requisição PUT
-    def do_PUT(self): 
-        self.processRequest()
+   
 
 def criaDiretorio():
     print 'inicio'
