@@ -17,7 +17,7 @@ import json, os
 
 
 
-url = os.environ["http://35.229.35.219:8080/"] 
+url = 'http://35.229.35.219:8080/" 
 parsed = urlparse.urlparse(url) 
 print urlparse.parse_qs(parsed.query)['op'] 
 
