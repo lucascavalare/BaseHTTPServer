@@ -17,13 +17,13 @@ import json, os
 #import socket 
 import requests 
 
-
-url = "http://35.229.35.219:8080/?op=estados"
+'''
+url = "http://35.229.35.219:8080/?op=consulta&estado=MG"
 headers = {'cache-control': "no-cache"}
 response = requests.request("GET", url, headers=headers)
 
 print json.dumps(json.loads(response.text), indent=2)
-
+'''
 
 '''
 HOST = '35.229.35.219'  # The remote host
