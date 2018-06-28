@@ -32,9 +32,9 @@ def test1(cep, url):
         r[registraServidor(s,d[s])] = d[s]
     print r
     print consultaEstados()
-    for s in d.keys():
-        print consultaServidor(s)
-    print consultaServidor('kk')
-    print consultaServidor('pp')
-    for k in r.keys():
-print removeServidor(r[k],k)
+    #for s in d.keys():
+    #    print consultaServidor(s)
+    #print consultaServidor('kk')
+    #print consultaServidor('pp')
+    #for k in r.keys():
+    #    print removeServidor(r[k],k)
