@@ -18,7 +18,7 @@ import socket
 
 
 #HOST = '35.229.35.219'  # The remote host
-HOST = '127.0.0.1'
+HOST = ""
 PORT = 8080             # The same port as used by the server
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((HOST, PORT))
