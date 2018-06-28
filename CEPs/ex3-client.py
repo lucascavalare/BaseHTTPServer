@@ -20,7 +20,8 @@ import socket
 HOST = '35.229.35.219'  # The remote host
 PORT = 8080             # The same port as used by the server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
+#server.bind((HOST, PORT))
+s.connect((HOST, PORT))
 s.listen(1)
 conn, addr = s.accept()
 print 'Connected by', addr
