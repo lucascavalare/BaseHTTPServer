@@ -22,7 +22,7 @@ PORT = 8080             # The same port as used by the server
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #server.bind((HOST, PORT))
 s.connect((HOST, PORT))
-s.listen(1)
+s.listen(5)
 conn, addr = s.accept()
 print 'Connected by', addr
 
