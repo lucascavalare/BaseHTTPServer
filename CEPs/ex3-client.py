@@ -22,7 +22,7 @@ url = "http://35.229.35.219:8080/?op=estados"
 headers = {'cache-control': "no-cache"}
 response = requests.request("GET", url, headers=headers)
 
-print json.dumps(response.text, indent=8)
+print(response.json)
 
 
 '''
