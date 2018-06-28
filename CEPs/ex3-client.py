@@ -18,7 +18,7 @@ import json, os
 import requests 
 
 
-url = "http://35.229.35.219:8080/?op=consulta&estado=MG"
+url = "http://35.229.35.219:8080"
 headers = {'cache-control': "no-cache"}
 response = requests.request("GET", url, headers=headers)
 
