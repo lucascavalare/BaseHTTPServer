@@ -13,9 +13,10 @@
 #import httplib
 #import sys
 #import httplib2
-#import json, os
+import json, os
 #import socket 
 import requests 
+
 
 url = "http://35.229.35.219:8080/?op=estados"
 headers = {'cache-control': "no-cache"}
