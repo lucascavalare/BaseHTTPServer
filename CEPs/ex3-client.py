@@ -18,6 +18,7 @@ import json, os
 
 
 url = 'http://35.229.35.219:8080/?'
+self.request.get('op')
 parsed = urlparse.urlparse(url) 
 print urlparse.parse_qs(parsed.query)['op'] 
 
