@@ -9,10 +9,19 @@
 #import queryparser
 import Diretorio
 
+import urlparse
 #import httplib
 #import sys
 import httplib2
-import json
+import json, os
+
+
+
+url = os.environ["REQUEST_URI"] 
+parsed = urlparse.urlparse(url) 
+print urlparse.parse_qs(parsed.query)['op'] 
+
+
 '''
 conn = httplib.HTTPConnection('35.196.162.70', 8080)
 conn.request("GET", "/?op=estados")
@@ -23,7 +32,7 @@ h = httplib2.Http(".cache")
 resp, content = h.request("http://35.196.162.70:8080/?op=registro&estado=MG&url=http://mg.gov.br:8080", "PUT", headers={'content-type':'text/json'})
 print json.dumps(resp, indent=5)
 '''
-
+'''
 def test1(cep, url):
     #d = {"SP":"souza:8080", "RJ":"rodrigues:8080","RN": "silva:8080", "RO":"oliveira:8080", "MG":"pereira:8080"}
     d = {"MG":"mg.gov.br:8080"}
@@ -38,3 +47,4 @@ def test1(cep, url):
     #print consultaServidor('pp')
     #for k in r.keys():
     #    print removeServidor(r[k],k)
+'''
